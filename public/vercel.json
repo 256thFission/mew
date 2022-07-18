@@ -1,0 +1,9 @@
+{
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_CONTENTFUL_SPACE_ID": "2i88897ufwv5" ,
+      "NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN": "bz4NlfyI7X9xsFbn5nf1hXBCn4mMmL50ZfSfIn-sb-c",
+      "accesstoken": "bz4NlfyI7X9xsFbn5nf1hXBCn4mMmL50ZfSfIn-sb-c"
+    }
+  }
+}
