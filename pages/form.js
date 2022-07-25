@@ -1,45 +1,170 @@
-import React, { useState, useEffect } from "react"
-import { createClient } from "contentful"
-import {client} from "contentful"
+import axios from 'axios';
+import {useState} from 'react'
 
-const client = createClient({
-    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-})
+const GETFORM_FORM_ENDPOINT = "https://getform.io/f/eea65ccb-1246-4e42-87ce-85492c9aee13";
 
-async function fetchJobPosts() {
-    const entries = await client.getEntries()
-    if (entries.items) return entries.items.map(({ fields }) => fields)
-    console.log(`Error getting Entries for ${contentType.name}.`)
-}
 
-function HomePage() {
-    const [jobPosts, setJobPosts] = useState([])
+function Form() {
+    const [formStatus, setFormStatus] = useState(false);
+    const [query, setQuery] = useState({
+        name: "",
+        email: "",
+        platform: "",
+        volnumber:"",
+        duration: "",
+        file: ""
+    });
 
-    useEffect(() => {
-        async function getJobPosts() {
-            const posts = await fetchJobPosts()
-            setJobPosts([...posts])
-        }
+    const handleFileChange = () => (e) => {
+        setQuery((prevState) => ({
+            ...prevState,
+            files: e.target.files[0]
+        }));
+    };
 
-        getJobPosts()
-    }, [])
+    const handleChange = () => (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setQuery((prevState) => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        Object.entries(query).forEach(([key, value]) => {
+            formData.append(key, value);
+        });
+
+        axios
+            .post(
+                GETFORM_FORM_ENDPOINT,
+                formData,
+                {headers: {Accept: "application/json"}}
+            )
+            .then(function (response) {
+                setFormStatus(true);
+                setQuery({
+                    name: "",
+                    email: "",
+                    platform: "",
+                    volnumber: "",
+                    duration: ""
+                });
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
     return (
-        <div>
-            <h1>My Job Board</h1>
-            {jobPosts.map(job => (
-                <div>
-                    <img src={job.companyImage} />
-                    <a href={job.link}>
-                        {job.title} - {job.company}
-                    </a>
-                    <p>{job.location}</p>
-                    <p>{job.createdAt}</p>
+        <div class="container-md">
+            <h2>BVU alpha vers form (no styling)</h2>
+            <form
+                acceptCharset="UTF-8"
+                method="POST"
+                enctype="multipart/form-data"
+                id="ajaxForm"
+                onSubmit={handleSubmit}
+            >
+                <div className="form-group mb-2">
+                    <label for="InputEmail1">Email address</label>
+                    <input
+                        type="email"
+                        className="form-control"
+                        id="InputEmail1"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                        required
+                        name="email"
+                        value={query.email}
+                        onChange={handleChange()}
+                    />
                 </div>
-            ))}
+                <div className="form-group mb-2">
+                    <label for="EventName"> Event Name</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="EventName"
+                        placeholder="Enter your Event Name"
+                        required
+                        name="name"
+                        value={query.name}
+                        onChange={handleChange()}
+                    />
+                </div>
+                <div className="form-group mb-2">
+                    <label htmlFor="duration"> Duration of the Event</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="duration"
+                        placeholder="Enter your Event Name"
+                        required
+                        name="name"
+                        value={query.duration}
+                        onChange={handleChange()}
+                    />
+                </div>
+                <div className="form-group mb-2">
+                    <label For="volnumberslide" class="form-label"> # of Volunteers Needed</label>
+                    <input
+                        type="range"
+                        class="form-range"
+                        id="volnumberslide"
+                        min="1"
+                        max="50"
+                        step="1"
+                        value={query.volnumber}
+                        onChange={handleChange()}
+                    />
+                </div>
+                {/*<div className="form-group mb-2">
+                    <label for="volnumberslide" class="form-label"># of Volunteers Needed </label>
+                    <input
+                        type="range"
+                        className="form-range"
+                        min="1"
+                        max="50"
+                        step="1"
+                        id="volnumberslide"
+                    />
+                <div/>*/}
+                <div className="form-group">
+                    <label for="EventType">Event Type</label>
+                    <select
+                        className="form-control"
+                        id="EventType"
+                        required
+                        name="platform"
+                        value={query.platform}
+                        onChange={handleChange()}
+                    >
+                        <option>Recurring Event </option>
+                        <option>One Time Event</option>
+                        <option>Donation Drive</option>
+                    </select>
+                </div>
+                <hr/>
+                <div className="form-group mt-3">
+                    <label className="mr-2">Thumbnail Image(optional):</label>
+                    <input name="file" type="file" onChange={handleFileChange()}/>
+                </div>
+                <hr/>
+                {formStatus ? (
+                    <div className="text-success mb-2">
+                        Your message has been sent.
+                    </div>
+                ) : (
+                    ""
+                )}
+                <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
         </div>
-    )
+    );
 }
 
-export default HomePage
+export default Form
