@@ -1,6 +1,9 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import styles from '../styles/Events.module.css'
+
+
+
 
 export default function signup() {
     const { register, handleSubmit, formState: { errors } } = useForm();

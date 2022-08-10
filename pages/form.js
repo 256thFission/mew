@@ -1,170 +1,143 @@
-import axios from 'axios';
-import {useState} from 'react'
+import React from 'react';
+import { makeStyles } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import { useForm, Controller } from 'react-hook-form';
+import { KeyboardDatePicker } from "@material-ui/pickers";
 
-const GETFORM_FORM_ENDPOINT = "https://getform.io/f/eea65ccb-1246-4e42-87ce-85492c9aee13";
+const useStyles = makeStyles(theme => ({
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: theme.spacing(2),
 
+        '& .MuiTextField-root': {
+            margin: theme.spacing(1),
+            width: '300px',
+        },
+        '& .MuiButtonBase-root': {
+            margin: theme.spacing(2),
+        },
+    },
+}));
 
-function Form() {
-    const [formStatus, setFormStatus] = useState(false);
-    const [query, setQuery] = useState({
-        name: "",
-        email: "",
-        platform: "",
-        volnumber:"",
-        duration: "",
-        file: ""
-    });
+const Form = ({ handleClose }) => {
+    const classes = useStyles();
+    const { handleSubmit, control } = useForm();
 
-    const handleFileChange = () => (e) => {
-        setQuery((prevState) => ({
-            ...prevState,
-            files: e.target.files[0]
-        }));
+    const onSubmit = data => {
+        console.log(data);
     };
 
-    const handleChange = () => (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setQuery((prevState) => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const formData = new FormData();
-        Object.entries(query).forEach(([key, value]) => {
-            formData.append(key, value);
-        });
-
-        axios
-            .post(
-                GETFORM_FORM_ENDPOINT,
-                formData,
-                {headers: {Accept: "application/json"}}
-            )
-            .then(function (response) {
-                setFormStatus(true);
-                setQuery({
-                    name: "",
-                    email: "",
-                    platform: "",
-                    volnumber: "",
-                    duration: ""
-                });
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
     return (
-        <div class="container-md">
-            <h2>BVU alpha vers form (no styling)</h2>
-            <form
-                acceptCharset="UTF-8"
-                method="POST"
-                enctype="multipart/form-data"
-                id="ajaxForm"
-                onSubmit={handleSubmit}
-            >
-                <div className="form-group mb-2">
-                    <label for="InputEmail1">Email address</label>
-                    <input
-                        type="email"
-                        className="form-control"
-                        id="InputEmail1"
-                        aria-describedby="emailHelp"
-                        placeholder="Enter email"
-                        required
-                        name="email"
-                        value={query.email}
-                        onChange={handleChange()}
-                    />
-                </div>
-                <div className="form-group mb-2">
-                    <label for="EventName"> Event Name</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="EventName"
-                        placeholder="Enter your Event Name"
-                        required
-                        name="name"
-                        value={query.name}
-                        onChange={handleChange()}
-                    />
-                </div>
-                <div className="form-group mb-2">
-                    <label htmlFor="duration"> Duration of the Event</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="duration"
-                        placeholder="Enter your Event Name"
-                        required
-                        name="name"
-                        value={query.duration}
-                        onChange={handleChange()}
-                    />
-                </div>
-                <div className="form-group mb-2">
-                    <label For="volnumberslide" class="form-label"> # of Volunteers Needed</label>
-                    <input
-                        type="range"
-                        class="form-range"
-                        id="volnumberslide"
-                        min="1"
-                        max="50"
-                        step="1"
-                        value={query.volnumber}
-                        onChange={handleChange()}
-                    />
-                </div>
-                {/*<div className="form-group mb-2">
-                    <label for="volnumberslide" class="form-label"># of Volunteers Needed </label>
-                    <input
-                        type="range"
-                        className="form-range"
-                        min="1"
-                        max="50"
-                        step="1"
-                        id="volnumberslide"
-                    />
-                <div/>*/}
-                <div className="form-group">
-                    <label for="EventType">Event Type</label>
-                    <select
-                        className="form-control"
-                        id="EventType"
-                        required
-                        name="platform"
-                        value={query.platform}
-                        onChange={handleChange()}
-                    >
-                        <option>Recurring Event </option>
-                        <option>One Time Event</option>
-                        <option>Donation Drive</option>
-                    </select>
-                </div>
-                <hr/>
-                <div className="form-group mt-3">
-                    <label className="mr-2">Thumbnail Image(optional):</label>
-                    <input name="file" type="file" onChange={handleFileChange()}/>
-                </div>
-                <hr/>
-                {formStatus ? (
-                    <div className="text-success mb-2">
-                        Your message has been sent.
-                    </div>
-                ) : (
-                    ""
-                )}
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    );
-}
 
-export default Form
+        <div className="flex items-center h-screen w-full bg-colm">
+            <div className="w-full bg-lightblu rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
+                <h1 className="block w-full text-center text-grey-darkest mb-6">Create an Event</h1>
+        <form className={classes.root} onSubmit={handleSubmit(onSubmit)}>
+            <Controller
+                name="Organization Name"
+                control={control}
+                defaultValue=""
+                render={({ field: { onChange, value }, fieldState: { error } }) => (
+                    <TextField
+                        label="Organization Name"
+                        variant="filled"
+                        value={value}
+                        onChange={onChange}
+                        error={!!error}
+                        helperText={error ? error.message : null}
+                        sx={{ m: 5 }}
+
+                    />
+                )}
+                rules={{ required: ' name required' }}
+            />
+
+            <Controller
+                name="email"
+                control={control}
+                defaultValue=""
+                render={({ field: { onChange, value }, fieldState: { error } }) => (
+                    <TextField
+                        label="Email"
+                        variant="filled"
+                        value={value}
+                        onChange={onChange}
+                        error={!!error}
+                        helperText={error ? error.message : null}
+                        type="email"
+                        sx={{ m: 5 }}
+                    />
+                )}
+                rules={{ required: 'Email required' }}
+            />
+            <Controller
+                name="Phone Number"
+                control={control}
+                defaultValue=""
+                render={({ field: { onChange, value }, fieldState: { error } }) => (
+                    <TextField
+                        label="Phone Number"
+                        variant="filled"
+                        value={value}
+                        onChange={onChange}
+                        error={!!error}
+                        helperText={error ? error.message : null}
+                        sx={{ m: 5 }}
+                    />
+                )}
+                rules={{ required: 'Phone Number required' }}
+            />
+            <Controller
+                name="EventName"
+                control={control}
+                defaultValue=""
+                render={({ field: { onChange, value }, fieldState: { error } }) => (
+                    <TextField
+                        label="Event Name"
+                        variant="filled"
+                        value={value}
+                        onChange={onChange}
+                        error={!!error}
+                        helperText={error ? error.message : null}
+                        sx={{ m: 5 }}
+                    />
+                )}
+                rules={{ required: 'Event name required' }}
+            />
+            <Controller
+                name="date"
+                control={control}
+                defaultValue={null}
+                render={({ field, ...props }) => {
+                    return (
+                        <KeyboardDatePicker
+                            value={field.value}
+                            onChange={(date) => {
+                                console.log({ date });
+                                field.onChange(date);
+                            }}
+                            variant="inline"
+                            autoOk
+                            format="DD/MM/yyyy"
+                            // onChange={(e) => field.onChange(e)}
+                        />
+            <div>
+                <Button variant="contained" onClick={handleClose}>
+                    Cancel
+                </Button>
+                <Button type="submit" variant="contained" color="primary" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Submit
+                </Button>
+            </div>
+        </form>
+            </div>
+        </div>
+
+    );
+};
+
+export default Form;
