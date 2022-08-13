@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import * as FaIcons from 'react-icons/fa';
 import { className } from '../../utils/class-name';
 
 export const ScrollToTop = () => {
@@ -39,10 +38,7 @@ export const ScrollToTop = () => {
                 )}
                 aria-label='Right Align'
             >
-                <FaIcons.FaChevronCircleUp
-                    className='h-6 w-6'
-                    aria-hidden='true'
-                />
+
             </button>
         </div>
     );

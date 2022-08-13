@@ -1,4 +1,3 @@
-import * as AiIcons from 'react-icons/ai';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -103,7 +102,7 @@ function Footer() {
                                     ©Aug,2022 <span className='mx-1'></span>
                                     Made with © by
                                     <div className='text-[#f53400] mx-1'>
-                                        <AiIcons.AiFillHeart />
+
                                     </div>
                                     <Link href='https://www.youtube.com/watch?v=iik25wqIuFo'>
                                         <a target='_blank'>

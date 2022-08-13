@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#88c6bd',
+        primary: '#88c4bd',
         secondary: '#333333',
         azure: '#eef2f2',
         sky: '#00ccff',
@@ -27,6 +27,7 @@ module.exports = {
         'page-banner-1': "url('/images/page-banner/1.jpg')",
         'page-banner-2': "url('/images/page-banner/2.jpg')",
         'new-post': "url('/images/background/new-post.jpg')",
+        'SVG-BG': "url('/public/formwave.svg')"
       },
       animation: {
         'fade-in-down': 'fadeInDown 3s linear normal',
