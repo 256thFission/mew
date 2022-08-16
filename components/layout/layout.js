@@ -1,15 +1,15 @@
 import { Fragment } from 'react';
 import Footer from './footer';
 
-export * from '../../components/scroll';
+export * from '../scroll';
 
 function Layout(props) {
-    return (
-        <Fragment>
-            <main>{props.children}</main>
-            <Footer />
-        </Fragment>
-    );
+  return (
+    <>
+      <main>{props.children}</main>
+      <Footer />
+    </>
+  );
 }
 
 export default Layout;

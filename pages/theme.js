@@ -26,6 +26,5 @@ const theme = createTheme({
     fontFamily: 'Roboto Mono',
   },
 
-
 });
-export default theme
+export default theme;

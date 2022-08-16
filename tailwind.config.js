@@ -13,9 +13,10 @@ module.exports = {
         azure: '#eef2f2',
         sky: '#00ccff',
         colm: '#90bede',
-        brit:'#68EDC6',
+        brit: '#68EDC6',
         lavender: '#E5E1EE',
         blucyan: '#dffdff',
+        main: '#111d4a',
 
       },
       padding: {
@@ -24,10 +25,10 @@ module.exports = {
       },
       backgroundImage: {
         'pattern-1': "url('/images/background/pattern-1.png')",
-        'page-banner-1': "url('/images/page-banner/1.jpg')",
+        'page-banner-1': "url('/images/page-banner/2.jpg')",
         'page-banner-2': "url('/images/page-banner/2.jpg')",
         'new-post': "url('/images/background/new-post.jpg')",
-        'SVG-BG': "url('/public/formwave.svg')"
+        'SVG-BG': "url('/public/formwave.svg')",
       },
       animation: {
         'fade-in-down': 'fadeInDown 3s linear normal',

@@ -79,7 +79,7 @@ textarea:focus-visible {
     @apply bg-[#111111];
 }
 .sticky-style-2 {
-    @apply bg-white border-[#dfdfdf] border-b;
+    @apply bg-lavender border-[#dfdfdf] border-b;
 }
 
 .language-list {

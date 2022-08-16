@@ -1,17 +1,17 @@
 // @ts-ignore
 import React, { useState } from 'react';
-import {makeStyles, StylesProvider} from '@mui/styles';
+import { makeStyles, StylesProvider } from '@mui/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { useForm, Controller, FieldError } from 'react-hook-form';
-import { DateTimePicker, KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { useForm, Controller } from 'react-hook-form';
 import '@fontsource/roboto-mono';
 import Grid from '@material-ui/core/Grid';
 import {
-  Box, Container, createMuiTheme, Divider, ThemeProvider, Typography,
+  Box, ThemeProvider, Typography,
 } from '@mui/material';
 import axios from 'axios';
-import theme from "./theme";
+import theme from './theme';
+
 const font = "'Roboto Mono', monospace";
 
 const useStyles = makeStyles((theme) => ({
@@ -42,9 +42,6 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-
-
-
 function Form({ handleClose }) {
   const classes = useStyles();
   const {
@@ -61,17 +58,18 @@ function Form({ handleClose }) {
       )
       .then((response) => { console.log(response.data); })
       .catch((error) => { console.log(error.data); });
+    alert('Submission Successful');
   };
 
   return (
-      <StylesProvider injectFirst>
-        <ThemeProvider theme={theme}>
-    <div className="flex items-center h-screen w-full bg-colm">
-      {/*
+    <StylesProvider injectFirst>
+      <ThemeProvider theme={theme}>
+        <div className="flex items-center h-screen w-full bg-colm">
+          {/*
         <h1 className="block w-full text-center text-grey-darkest mb-6">Create an Event</h1>
 
 */}
-      {' '}
+          {' '}
 
           <form
             id="signform"
@@ -88,7 +86,7 @@ function Form({ handleClose }) {
               justifyContent="center"
               style={{ minHeight: '100vh' }}
             >
-              <Typography sx={{textDecoration: 'underline'}} variant="h2" component="div"> Event Creator</Typography>
+              <Typography sx={{ textDecoration: 'underline' }} variant="h2" component="div"> Event Creator</Typography>
 
               <Box sx={{
                 bgcolor: 'background.paper',
@@ -237,7 +235,7 @@ function Form({ handleClose }) {
                       label="Description"
                       variant="filled"
                       multiline
-                      rows={4}
+                      minRows={4}
                       maxrows={8}
                       value={value}
                       onChange={onChange}
@@ -253,11 +251,12 @@ function Form({ handleClose }) {
                 <Button
                   variant="contained"
                   color="secondary"
-                  fullWidth= {true}
+                  fullWidth
                   size="large"
                   onClick={
 
-                  handleSubmit(onSubmit)}
+                  handleSubmit(onSubmit)
+}
                   sx={{ width: 500, padding: 1, margin: 2 }}
                 >
                   Submit
@@ -267,9 +266,9 @@ function Form({ handleClose }) {
             </Grid>
           </form>
 
-    </div>
-        </ThemeProvider>
-      </StylesProvider>
+        </div>
+      </ThemeProvider>
+    </StylesProvider>
   );
 }
 
