@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Firebase from './firebase';
 
 const formatAuthUser = (user) => ({
   uid: user.uid,
