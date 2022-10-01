@@ -5,7 +5,7 @@ heroYear: 2022
 twitterIcon: 'FaTwitter'
 discordIcon: 'FaDiscord'
 googleIcon: 'FaGoogle'
-heroCategory: BVU <br /> 
+heroCategory: KVU <br /> 
 heroTitle: Building Community <br />Bridges
 heroContactInfo: bakersfieldvolunteersunited@gmail.com
 ---

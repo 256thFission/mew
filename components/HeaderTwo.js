@@ -34,7 +34,7 @@ function HeaderTwo() {
       <header className="header-section sticky-style-2">
         <div className="custom-container container">
           <div className="grid grid-cols-12 items-center leading-[120px]">
-            <div className="lg:col-span-2 col-span-6">
+            <div className="lg:col-span-2 col-span-3">
               <DarkLogo />
             </div>
             <div className="lg:col-span-7 lg:block hidden">
@@ -42,7 +42,7 @@ function HeaderTwo() {
                 <ul className="main-menu">
                   <li
                     className={
-                                            router.pathname == '/'
+                                            router.pathname === '/'
                                               ? 'active'
                                               : ''
                                         }
@@ -108,6 +108,9 @@ function HeaderTwo() {
                 </ul>
               </nav>
             </div>
+            <div />
+            <div />
+            <div />
             {/* <div className="lg:col-span-3 col-span-6"> */}
             {/*  <div className={`outer-box ${headerCss}`}> */}
             {/*    <ul className="language-list"> */}
@@ -146,7 +149,7 @@ function HeaderTwo() {
                 <Link href="/">
                   <a>
                     <Image
-                      src="/images/logo/logo-2.png"
+                      src="/images/logo/logo2.png"
                       alt="Logo"
                       width={70}
                       height={70}
