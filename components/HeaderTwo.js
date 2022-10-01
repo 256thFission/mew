@@ -108,24 +108,24 @@ function HeaderTwo() {
                 </ul>
               </nav>
             </div>
-            <div className="lg:col-span-3 col-span-6">
-              <div className={`outer-box ${headerCss}`}>
-                <ul className="language-list">
-                  <li>
-                    <Link href="/login">Login</Link>
-                  </li>
+            {/* <div className="lg:col-span-3 col-span-6"> */}
+            {/*  <div className={`outer-box ${headerCss}`}> */}
+            {/*    <ul className="language-list"> */}
+            {/*      <li> */}
+            {/*        <Link href="/login">Login</Link> */}
+            {/*      </li> */}
 
-                </ul>
-                <ul className="language-list" />
-                <div className="offcanvas-area">
-                  <div className="offcanvas">
-                    <button className="menu-bars flex text-[20px]">
-                      <FaBars onClick={showOffcanvas} />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/*    </ul> */}
+            {/*    <ul className="language-list" /> */}
+            {/*    <div className="offcanvas-area"> */}
+            {/*      <div className="offcanvas"> */}
+            {/*        <button className="menu-bars flex text-[20px]"> */}
+            {/*          <FaBars onClick={showOffcanvas} /> */}
+            {/*        </button> */}
+            {/*      </div> */}
+            {/*    </div> */}
+            {/*  </div> */}
+            {/* </div> */}
           </div>
         </div>
       </header>
