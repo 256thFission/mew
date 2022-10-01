@@ -1,12 +1,8 @@
-import { Fragment } from 'react';
-import HeaderTwo from '../components/HeaderTwo';
 import Services from '../components/home-page/services';
 import About from '../components/home-page/about';
-import Testimonial from '../components/home-page/testimonial';
-import { getAllItems } from '/public/lib/items-util';
-import Brand from '../components/home-page/brand';
+import { getAllItems } from '../public/lib/items-util';
 import PageBanner from '../components/page-banner/index';
-import Team from '/components/team/index';
+import Team from '../components/team/index';
 
 function AboutPage(props) {
   return (
@@ -14,7 +10,9 @@ function AboutPage(props) {
 
       <PageBanner />
       <About />
+      {/* eslint-disable-next-line react/destructuring-assignment,react/prop-types */}
       <Services services={props.services} />
+      {/* eslint-disable-next-line react/destructuring-assignment,react/prop-types */}
       <Team teamItems={props.teamItems} />
     </fragment>
   );

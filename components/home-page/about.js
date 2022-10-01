@@ -23,10 +23,12 @@ function About() {
               {' '}
             </h3>
             <p className={desc}>
-              Student volunteer club officers can join our Discord Platform and get notified of NGO volunteering events immediately after their post. Fill out this quick questionare so we can admit you in!
+              Student volunteer club officers can join our Discord Platform and get notified of NGO volunteering events immediately after their post.
+              <br />
+              Fill out this quick questionare so we can admit you in!
               {' '}
             </p>
-            <Link href="/events">
+            <Link href="/form">
               <a className="boxed-btn text-[18px] leading-[30px]">
                 Get started
               </a>

@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import React, { useState } from 'react';
 import { makeStyles, StylesProvider } from '@mui/styles';
@@ -10,7 +11,7 @@ import {
   Box, ThemeProvider, Typography,
 } from '@mui/material';
 import axios from 'axios';
-import theme from './theme';
+import theme from '../utils/theme';
 
 const font = "'Roboto Mono', monospace";
 
@@ -25,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+// eslint-disable-next-line react/prop-types
 function Form({ handleClose }) {
   const classes = useStyles();
   const {

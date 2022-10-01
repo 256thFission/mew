@@ -5,8 +5,9 @@ import Layout from '../components/layout/layout';
 import { ScrollToTop } from '../components/scroll';
 import '@fontsource/roboto-mono';
 import HeaderTwo from '../components/HeaderTwo';
-import { AuthUserProvider } from '/utils/AuthUserProvider';
+import { AuthUserProvider } from '../utils/AuthUserProvider';
 
+// eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
   return (
     <AuthUserProvider>
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }) {
           <link rel="shortcut icon" href="../favicon.ico" />
         </Head>
         <HeaderTwo />
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
 
         {/* </Layout> */}
