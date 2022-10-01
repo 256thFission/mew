@@ -114,9 +114,7 @@ function HeaderTwo() {
                   <li>
                     <Link href="/login">Login</Link>
                   </li>
-                  <li>
-                    <Link href="/signup">Signup</Link>
-                  </li>
+
                 </ul>
                 <ul className="language-list" />
                 <div className="offcanvas-area">

@@ -16,23 +16,6 @@ const font = "'Roboto Mono', monospace";
 
 const useStyles = makeStyles((theme) => ({
   spacing: 4,
-  palette: {
-    type: 'light',
-    primary: {
-      main: '#111d4a',
-      light: '#6290c8',
-    },
-    secondary: {
-      main: '#f39b6d',
-    },
-    background: {
-      paper: '#DFFDFF',
-      default: '#545E75',
-    },
-    text: {
-      primary: '#1e1e1e',
-    },
-  },
   typography: {
     fontFamily: 'Roboto Mono',
   },
@@ -64,7 +47,7 @@ function Form({ handleClose }) {
   return (
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <div className="flex items-center h-screen w-full bg-colm">
+        <div className="flex items-center h-screen w-full bg-gradient-to-br from-indep to-paste">
           {/*
         <h1 className="block w-full text-center text-grey-darkest mb-6">Create an Event</h1>
 
@@ -201,7 +184,7 @@ function Form({ handleClose }) {
                   defaultValue=""
                   render={({ field: { onChange, value }, fieldState: { error } }) => (
                     <TextField
-                      label="Address"
+                      label="Location"
                       variant="filled"
                       value={value}
                       onChange={onChange}
@@ -246,6 +229,22 @@ function Form({ handleClose }) {
                 />
                 <div />
 
+                <Controller
+                  name="SignUp-Link"
+                  control={control}
+                  defaultValue=""
+                  render={({ field: { onChange, value }, fieldState: { error } }) => (
+                    <TextField
+                      label="Your Sign up Link"
+                      variant="filled"
+                      value={value}
+                      onChange={onChange}
+                      error={!!error}
+                      helperText="Or leave blank to use ours!"
+                      sx={{}}
+                    />
+                  )}
+                />
               </Box>
               <div>
                 <Button

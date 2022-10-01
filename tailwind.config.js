@@ -17,6 +17,9 @@ module.exports = {
         lavender: '#E5E1EE',
         blucyan: '#dffdff',
         main: '#111d4a',
+        eton: '#8BBF9F',
+        indep: '#668F80',
+        paste: '#2B4570',
 
       },
       padding: {

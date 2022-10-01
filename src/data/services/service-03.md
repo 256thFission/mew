@@ -1,6 +1,7 @@
 ---
-title: 'Suitanable Space'
-icon: 'AiOutlineReload'
+title: 'How It works'
+icon: 'TbArrowsRandom'
+redirect: /
 ---
 
-We provide all materials, labor, equip ensure a safe and secure
+IDK what to put here, Let An decide probably

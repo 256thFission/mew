@@ -17,14 +17,14 @@ function About() {
               Nonprofits In Need
             </h2>
             <h3 className="text-secondary text-2xl mb-12">
-              We know that good design means
+              Join Our Platform
               {' '}
               <br />
               {' '}
-              good business
             </h3>
             <p className={desc}>
-              Blah Blah blop, Loris ipsum or smth, THis is where the text An wrote will probably go
+              Student volunteer club officers can join our Discord Platform and get notified of NGO volunteering events immediately after their post. Fill out this quick questionare so we can admit you in!
+              {' '}
             </p>
             <Link href="/events">
               <a className="boxed-btn text-[18px] leading-[30px]">
@@ -34,9 +34,9 @@ function About() {
           </div>
           <div className={aboutImage}>
             <Image
-              src="/images/about/1.jpg"
+              src="/images/about/1.png"
               alt="Service Image"
-              width={390}
+              width={500}
               height={760}
               quality={70}
               layout="fixed"

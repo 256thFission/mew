@@ -1,6 +1,7 @@
 ---
-title: "Residential"
-icon: "AiOutlineHome"
+title: "Charities"
+icon: "TbHeartHandshake"
+redirect: /
 ---
 
-We provide all materials, labor, equip ensure a safe and secure
+Our platform allows Nonprofits to access hundreds of Proven High School Volunteers with the click of a button

@@ -1,6 +1,7 @@
 ---
-title: "Commercial"
-icon: "AiOutlineShoppingCart"
+title: "Students"
+icon: "TbApple"
+redirect: https://discord.gg/F2YWZtthM9
 ---
 
-We provide all materials, labor, equip ensure a safe and secure
+Get Notifications and easy access to Volunteering opportunities 

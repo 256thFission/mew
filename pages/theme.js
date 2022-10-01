@@ -6,13 +6,13 @@ const theme = createTheme({
     type: 'light',
     primary: {
       main: '#111d4a',
-      light: '#6290c8',
+      light: '#8BBF9F',
     },
     secondary: {
       main: '#f39b6d',
     },
     background: {
-      paper: '#dffdff',
+      paper: '#F5E0B7',
       default: '#111d4a',
     },
     text: {
