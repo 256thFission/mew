@@ -25,6 +25,15 @@ const theme = createTheme({
   div: {
     fontFamily: 'Roboto Mono',
   },
+  Button: {
+    backgroundColor: '#3c52b2',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: '#fff',
+      color: '#3c52b2',
+    },
+
+  },
 
 });
 export default theme;

@@ -5,12 +5,12 @@ import Layout from '../components/layout/layout';
 import { ScrollToTop } from '../components/scroll';
 import '@fontsource/roboto-mono';
 import HeaderTwo from '../components/HeaderTwo';
-import { AuthUserProvider } from '../utils/AuthUserProvider';
+import {AuthContextProvider} from "../context/AuthContext";
 
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
   return (
-    <AuthUserProvider>
+    <AuthContextProvider>
       <themeprovider>
         {/* <Layout> */}
         <Head>
@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
 
         {/* </Layout> */}
       </themeprovider>
-    </AuthUserProvider>
+    </AuthContextProvider>
 
   );
 }

@@ -9,19 +9,37 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+import theme from '../utils/theme';
+import { UserAuth } from '../context/AuthContext';
+import router from 'next/router';
 
-const theme = createTheme();
+function SignIn() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const { signIn } = UserAuth();
 
-export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    try {
+      await signIn(email, password);
+      router.push('/form');
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+      console.log(password, email);
+    }
   };
-
+  const onEmailChange = (e) => {
+    console.log('Typed => $(e.target.value)');
+    setEmail(e.target.value);
+  };
+  const onPasswordChange = (e) => {
+    console.log('Typed => $(e.target.value)');
+    setPassword(e.target.value);
+  };
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -44,6 +62,8 @@ export default function SignIn() {
               id="email"
               label="Email Address"
               name="email"
+              value={email}
+              onChange={onEmailChange}
               autoComplete="email"
               autoFocus
             />
@@ -54,14 +74,16 @@ export default function SignIn() {
               name="password"
               label="Password"
               type="password"
+              value={password}
+              onChange={onPasswordChange}
               id="password"
               autoComplete="current-password"
             />
             <Button
+              color="success"
               type="submit"
-              color="primary"
               fullWidth
-              variant="contained"
+              variant="outlined"
               sx={{ mt: 3, mb: 2 }}
             >
               Sign In
@@ -73,3 +95,5 @@ export default function SignIn() {
     </ThemeProvider>
   );
 }
+
+export default SignIn;

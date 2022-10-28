@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 // TODO: Add SDKs for Firebase products that you want to use
 
@@ -18,15 +18,13 @@ const firebaseConfig = {
 
   storageBucket: process.env.NEXT_PUNLIC_FIREBASE_STORAGE_BUCKET,
 
-  messagingSenderId: '363489158645',
+  messagingSenderId: '462689197080',
 
-  appId: '1:363489158645:web:bc97a62bac3da52a08ecbc',
-
-  measurementId: 'G-E03EL0YGPH',
+  appId: '1:462689197080:web:d349e2754ecf5ad552376d',
 
 };
 
-// Initialize Firebase
-
-const app = initializeApp(firebaseConfig);
+let App;
+if (!getApps().length) { App = initializeApp(firebaseConfig); } else { App = getApp(); }
+// export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();

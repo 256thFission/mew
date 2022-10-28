@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import theme from '../utils/theme';
+import {withProtected} from "../context/route";
 
 const font = "'Roboto Mono', monospace";
 
@@ -50,10 +51,7 @@ function Form({ handleClose }) {
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <div className="flex items-center h-screen w-full bg-gradient-to-br from-indep to-paste">
-          {/*
-        <h1 className="block w-full text-center text-grey-darkest mb-6">Create an Event</h1>
 
-*/}
           {' '}
 
           <form
@@ -273,4 +271,4 @@ function Form({ handleClose }) {
   );
 }
 
-export default Form;
+export default withProtected(Form);
