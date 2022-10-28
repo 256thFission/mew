@@ -10,7 +10,7 @@ import {
 } from 'firebase/auth';
 import { auth } from '../Config/firebase';
 
-const UserContext = createContext();
+const UserContext = createContext(undefined);
 
 // eslint-disable-next-line react/prop-types
 export function AuthContextProvider({ children }) {

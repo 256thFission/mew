@@ -10,9 +10,9 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
-import theme from '../utils/theme';
-import { UserAuth } from '../context/AuthContext';
 import router from 'next/router';
+import theme from '../utils/theme';
+import { UserAuth } from '../context/AuthContext.tsx';
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -26,6 +26,7 @@ function SignIn() {
     try {
       await signIn(email, password);
       router.push('/form');
+      // eslint-disable-next-line no-shadow
     } catch (e) {
       setError(e.message);
       console.log(e.message);
