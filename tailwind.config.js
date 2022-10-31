@@ -61,6 +61,7 @@ module.exports = {
     fontFamily: {
       inter: ['Inter, sans-serif'],
       heebo: ['Heebo, sans-serif'],
+      body: ['sans-serif']
     },
 
     container: {
@@ -95,6 +96,7 @@ module.exports = {
       lg: '992px',
       xl: '1200px',
     },
+
   },
   variants: {
     extand: {},

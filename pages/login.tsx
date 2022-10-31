@@ -9,6 +9,7 @@ import { useState } from 'react';
 import router from 'next/router';
 import theme from '../utils/theme';
 import { UserAuth } from '../context/AuthContext';
+import Link from 'next/link';
 
 function SignIn() {
   const [email, setEmail] = useState('');
@@ -51,7 +52,7 @@ function SignIn() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 0.5 }}>
             <TextField
               margin="normal"
               required
@@ -76,6 +77,7 @@ function SignIn() {
               id="password"
               autoComplete="current-password"
             />
+
             <Button
               color="success"
               type="submit"
@@ -87,6 +89,13 @@ function SignIn() {
             </Button>
 
           </Box>
+          <Link href="https://discord.gg/fT8zpmE4yW">
+            <a>
+            <span className="text-xs underline hover:text-blue-600 align-self-lg-end  ">
+              Or Join Here As a Student
+            </span>
+            </a>
+          </Link>
         </Box>
       </Container>
     </ThemeProvider>

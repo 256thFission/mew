@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function About() {
   const subTitle = 'text-[18px] leading-[32px] text-secondary uppercase';
-  const title = 'lm:text-[42px] lm:leading-[50px] text-[32px] text-black mb-[35px] lg:max-w-[460px]';
+  const title = 'font-mono lm:text-[42px] lm:leading-[50px] text-[32px] text-black mb-[35px] lg:max-w-[460px]';
   const desc = 'text-[14px] leading-[25px] text-secondary mb-[80px] lg:max-w-[490px]';
   const aboutImage = 'flex justify-end relative sm:before:bg-pattern-1 sm:before:absolute sm:before:h-[336px] sm:before:w-[336px] sm:before:top-[75px] sm:before:left-[85px]';
   return (
@@ -25,7 +25,7 @@ function About() {
             <p className={desc}>
               Student volunteer club officers can join our Discord Platform and get notified of NGO volunteering events immediately after their post.
               <br />
-              Fill out this quick questionare so we can admit you in!
+              Join us Today!
               {' '}
             </p>
             <Link href="/form">

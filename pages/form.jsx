@@ -240,7 +240,7 @@ function Form({ handleClose }) {
                       value={value}
                       onChange={onChange}
                       error={!!error}
-                      helperText="Or leave blank to use ours!"
+                      // helperText="Or leave blank to use ours!"
                       sx={{}}
                     />
                   )}

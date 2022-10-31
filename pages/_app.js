@@ -1,8 +1,6 @@
 import '../styles/globals.css';
 import { createTheme } from '@mui/material';
 import Head from 'next/head';
-import Layout from '../components/layout/layout';
-import { ScrollToTop } from '../components/scroll';
 import '@fontsource/roboto-mono';
 import HeaderTwo from '../components/HeaderTwo';
 import {AuthContextProvider} from "../context/AuthContext";
