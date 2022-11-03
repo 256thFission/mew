@@ -7,10 +7,10 @@ function DarkLogo() {
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a className="inline-block align-middle leading-[1]">
         <Image
-          src="/images/logo/logo2.png"
+          src="/images/logo/KVULogo.svg"
           alt="Logo"
-          width={80}
-          height={80}
+          width={120}
+          height={120}
         />
       </a>
     </Link>

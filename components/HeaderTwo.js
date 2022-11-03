@@ -4,6 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState, useEffect, Fragment } from 'react';
 import { useRouter } from 'next/router';
+import { Dialog } from '@mui/material';
 import { OffcanvasData } from './offcanvas-data';
 import DarkLogo from './dark-logo';
 
@@ -99,11 +100,25 @@ function HeaderTwo() {
                                               : ''
                                         }
                   >
-                    <Link href="/contact">
-                      <a>
-                        <span>Contact</span>
-                      </a>
-                    </Link>
+                    <a>
+                      <button onClick={  (
+                        <Dialog
+                          open
+                          style={{ width: '200px', marginLeft: '40%', backgroundColor: 'transparent' }}
+                          overlayStyle={{ backgroundColor: 'transparent' }}
+                          title="Loading"
+                          titleStyle={{
+                            paddingTop: '0px', paddingLeft: '45px', fontSize: '15px', lineHeight: '40px',
+                          }}
+                        >
+                          pizza
+                        </Dialog>
+
+                      )}
+                      >
+                        CONTACT
+                      </button>
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -149,7 +164,7 @@ function HeaderTwo() {
                 <Link href="/">
                   <a>
                     <Image
-                      src="/images/logo/logo2.png"
+                      src="/images/logo/KVULogo.svg"
                       alt="Logo"
                       width={70}
                       height={70}

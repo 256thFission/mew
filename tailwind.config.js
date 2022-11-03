@@ -8,6 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        bluemain:'#2E3191',
+        Tanish:'#EACAAE',
+        greeny:'#427E3A',
         primary: '#88c4bd',
         secondary: '#333333',
         azure: '#eef2f2',

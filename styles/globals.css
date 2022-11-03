@@ -30,7 +30,7 @@ textarea:focus-visible {
     @apply block pr-[45px];
 }
 .main-menu li a span {
-    @apply relative block before:absolute before:left-0 before:bottom-0 before:right-0 before:h-[1px] before:opacity-0 before:bg-white before:transform before:scale-x-[0.2] before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-x-100;
+    @apply relative block before:absolute before:left-0 before:bottom-0 before:right-0 before:h-[1px] before:opacity-0 before:bg-Tanish before:transform before:scale-x-[0.2] before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-x-100;
 }
 .main-menu li.active a span {
     @apply before:opacity-100 before:scale-x-100;
