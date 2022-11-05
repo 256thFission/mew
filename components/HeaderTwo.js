@@ -28,11 +28,10 @@ function HeaderTwo() {
   };
 
   const router = useRouter();
-  const headerCss = 'flex lg:justify-between justify-end items-center';
 
   return (
     <>
-      <header className="header-section sticky-style-2">
+      <header className="header-section sticky-style-2  ">
         <div className="custom-container container">
           <div className="grid grid-cols-12 items-center leading-[120px]">
             <div className="lg:col-span-2 col-span-3">
@@ -101,7 +100,7 @@ function HeaderTwo() {
                                         }
                   >
                     <a>
-                      <button onClick={  (
+                      <button onClick={(
                         <Dialog
                           open
                           style={{ width: '200px', marginLeft: '40%', backgroundColor: 'transparent' }}
@@ -159,7 +158,7 @@ function HeaderTwo() {
             className="offcanvas-menu-items"
             onClick={showOffcanvas}
           >
-            <li className="navbar-toggle flex justify-between items-center pb-[15px]">
+            <li className="navbar-toggle flex justify-between items-center pb-[15px] ">
               <div className="logo">
                 <Link href="/">
                   <a>

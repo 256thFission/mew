@@ -5,7 +5,7 @@ import * as TablerIcons from 'react-icons/tb';
 
 function Services({ services }) {
   return (
-    <div className="service-area md:pt-160 pt-[60px] relative before:bg-pattern-1 before:absolute before:h-[336px] before:w-[336px] before:top-[170px] before:left-[-168px]">
+    <div className="border-6 bg-gradient-to-tl from-greeny via-colm to-white  service-area md:pt-160 py-[60px] relative before:bg-pattern-1 before:absolute before:h-[336px] before:w-[336px] before:top-[170px] before:left-[-168px]">
       <div className="container max-w-full lg:pl-[70px] lg:pr-0">
         <div className="lg:grid lg:grid-cols-12 flex flex-col-reverse">
           <div className="lg:col-span-6 xl:mr-[140px] lg:mr-[40px] max-md:pt-[50px]">
@@ -19,10 +19,10 @@ function Services({ services }) {
                   const Icon = TablerIcons[service?.icon];
                   return (
                     <div
-                      className="service-box"
+                      className="service-box "
                       key={service?.title}
                     >
-                      <div className="service-box-inner">
+                      <div className="service-box-inner bg-white">
                         <div className="service-list">
                           <div className="icon">
                             <Icon />

@@ -24,7 +24,7 @@ textarea:focus-visible {
 /*  - header
 /*----------------------------------------*/
 .main-menu {
-    @apply flex justify-start uppercase leading-8 text-[14px];
+    @apply flex justify-start uppercase leading-8 text-[15px] text-white
 }
 .main-menu li a {
     @apply block pr-[45px];
@@ -58,7 +58,7 @@ textarea:focus-visible {
     @apply bg-[#111111];
 }
 .sticky-style-2 {
-    @apply bg-lavender border-[#dfdfdf] border-b;
+    @apply bg-bluemain  border-[#427E3A] border-b;
 }
 
 .language-list {

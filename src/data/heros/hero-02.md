@@ -7,5 +7,5 @@ discordIcon: 'FaDiscord'
 googleIcon: 'FaGoogle'
 heroCategory: KVU <br /> 
 heroTitle: Building Community <br />Bridges
-heroContactInfo: bakersfieldvolunteersunited@gmail.com
+heroContactInfo: kernvolunteersunited@gmail.com
 ---

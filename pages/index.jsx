@@ -4,6 +4,7 @@ import Hero from '../components/home-page/hero';
 import { getAllItems, getFeaturedItems } from '../public/lib/items-util';
 import About from '../components/home-page/about';
 import { VerticalFeatures } from '../components/features/VerticalFeatures.tsx';
+import Services from "../components/home-page/services.js";
 
 
 export default function Home(props) {
@@ -16,6 +17,7 @@ export default function Home(props) {
       </Head>
       {/* eslint-disable-next-line react/prop-types,react/destructuring-assignment */}
       <Hero heroItems={props.heroItems} />
+      <Services services={props.services} />
       <VerticalFeatures/>
       <About />
     </fragment>

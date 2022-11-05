@@ -45,13 +45,6 @@ function Team({ teamItems }) {
 
                         </li>
 
-                        <li className="duration-300 hover:text-black mr-[20px]">
-                          <Link href="https://www.instagram.com/">
-                            <a>
-                              <InstagramIcon />
-                            </a>
-                          </Link>
-                        </li>
                         <li className="duration-300 hover:text-black">
                           <Link href={teamItem?.discordlink}>
                             <a>

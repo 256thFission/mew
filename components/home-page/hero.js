@@ -48,13 +48,6 @@ function Hero({ heroItems }) {
                       <ul className="social-box mb-[-140px]">
                         <li className="mb-[25px]">
                           <Link href="https://example.com/">
-                            <a target="_blank" aria-label="Twitter">
-                              <TwitterIcon />
-                            </a>
-                          </Link>
-                        </li>
-                        <li className="mb-[25px]">
-                          <Link href="https://example.com/">
                             <a target="_blank" aria-label="Discord">
                               <DiscordIcon />
                             </a>
@@ -94,7 +87,7 @@ function Hero({ heroItems }) {
                 </div>
               </div>
               <div className="info text-white hover:text-primary transition-all text-[14px] uppercase absolute bottom-[100px] sm:right-[70px] right-auto z-[2]">
-                <Link href="mailto:BakersfieldVolunteersUnite@gmail.com">
+                <Link href="mailto:KernVolunteersUnited@gmail.com">
                   {heroItem?.heroContactInfo}
                 </Link>
               </div>
