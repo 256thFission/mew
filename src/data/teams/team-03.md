@@ -1,12 +1,12 @@
 ---
 title: Team Member
-image: /images/team/AnwitaPhoto.jpg
+image: /images/team/AnPhoto.jpg
 twitterIcon: 'FaTwitter'
 facebookIcon: 'FaFacebookF'
 instagramIcon: 'FaInstagram'
 linkedinIcon: 'FaDiscord'
-memberName: Anwita Chandrasekhar
-maslow: Anwita is a senior who enjoys writing, traveling, chemistry, and spending time with her friends and family. She enjoys volunteering and aspires to pursue a career where she can help others
-designation: Chief Operating Officer
-discordlink: https://discordapp.com/users/830216556721864704
+memberName: An Truong
+maslow: An enjoys family road trips, hanging out with her amazing friends, writing poetry, ranting in her speech and debate team, and learning everything she can about how humans work!
+designation: Chief Marketing Officer
+discordlink: https://discordapp.com/users/632080168806121512
 ---

@@ -58,7 +58,7 @@ textarea:focus-visible {
     @apply bg-[#111111];
 }
 .sticky-style-2 {
-    @apply bg-bluemain  border-[#427E3A] border-b;
+    @apply bg-bluemain   ;
 }
 
 .language-list {

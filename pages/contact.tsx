@@ -1,11 +1,11 @@
 import className from 'classnames';
+import Image from 'next/image';
 import Services from '../components/home-page/services';
 import About from '../components/home-page/about';
 import { getAllItems } from '../public/lib/items-util';
 import PageBanner from '../components/page-banner/index';
 import Team from '../components/team/index';
 import { VerticalFeatureRow } from '../components/features/VerticalFeatureRow';
-import Image from 'next/image'
 
 function Contact() {
   return (
@@ -20,9 +20,10 @@ function Contact() {
           <br />
           Discord: https://discord.gg/fT8zpmE4yW
           {' '}
-            <br />
-         Non-Profits contact our email to get a Login key!
         </div>
+          <h2 className="font-semibold">
+          If you are a non-profit organization wanting to post events on our platform, contact our email to get a login key!
+          </h2>
       </div>
 
       <div className="  p-2 border-4 border-Tanish">

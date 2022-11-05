@@ -1,12 +1,13 @@
 ---
 title: Team Member
-image: /images/team/shaileshphoto.jpg
+image: /images/team/PhillipPhoto.jpg
 twitterIcon: 'FaTwitter'
 facebookIcon: 'FaFacebookF'
 instagramIcon: 'FaInstagram'
 linkedinIcon: 'FaDiscord'
-memberName: Shailesh 
-maslow: Shailesh Nagalingam is passionate about entrepreneurship and contributing to the betterment of the world. He enjoys traveling and spending time with his friends and family
-designation: Chief Executive Officer
-discordlink: https://discordapp.com/users/763930146495004702
+memberName: Phillip Lin
+maslow: Phillip is very much a cat person, and lives with a pack of four cats (and 3 younger siblings). He also enjoys cooking, coding and coffee, and used the latter of the two to make this webpage.
+designation: Chief Technical Officer
+discordlink: https://discordapp.com/users/764506117694423060
+
 ---

@@ -8,7 +8,7 @@ function Team({ teamItems }) {
     <div className="team-area md:py-155 py-[55px] border-[#dfdfdf] border-b">
       <div className="container">
         <h2 className="lm:text-[42px] text-[32px] lm:leading-[20px] mb-[60px]">
-          Our KVU team
+          Our KVU Team
         </h2>
         <div className="grid sm:grid-cols-12 lg:gap-x-[40px] fixed-md:gap-x-[20px] gap-[20px]">
           {teamItems?.map((teamItem, i) => {
@@ -57,11 +57,10 @@ function Team({ teamItems }) {
                   </div>
                   <div className="team-member-content pt-[25px] rounded-lg">
                     <h3>
-                      <Link href="/about">
+
                         <a className="transition-all hover:text-[#caac6b] text-[24px] leading-[31px]">
                           {teamItem?.memberName}
                         </a>
-                      </Link>
                     </h3>
                     <span className="designation text-secondary leading-6 block text-[14px] mt-[5px]">
                       {teamItem?.designation}

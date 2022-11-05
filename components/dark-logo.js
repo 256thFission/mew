@@ -9,8 +9,8 @@ function DarkLogo() {
         <Image
           src="/images/logo/KVULogo.svg"
           alt="Logo"
-          width={120}
-          height={120}
+          width={100}
+          height={100}
         />
       </a>
     </Link>

@@ -1,13 +1,12 @@
 ---
 title: Team Member
-image: /images/team/PhillipPhoto.jpg
+image: /images/team/AnwitaPhoto.jpg
 twitterIcon: 'FaTwitter'
 facebookIcon: 'FaFacebookF'
 instagramIcon: 'FaInstagram'
 linkedinIcon: 'FaDiscord'
-memberName: Phillip Lin
-maslow: Phillip is very much a cat person, and lives with a pack of four cats (and 3 younger siblings). He also enjoys cooking, coding and coffee, and used the latter of the two to make this webpage.
-designation: Chief Technical Officer
-discordlink: https://discordapp.com/users/764506117694423060
-
+memberName: Anwita Chandrasekhar
+maslow: Anwita is a senior who enjoys writing, traveling, chemistry, and spending time with her friends and family. She enjoys volunteering and aspires to pursue a career where she can help others
+designation: Chief Operating Officer
+discordlink: https://discordapp.com/users/830216556721864704
 ---
