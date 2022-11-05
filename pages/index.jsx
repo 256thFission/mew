@@ -17,9 +17,9 @@ export default function Home(props) {
       </Head>
       {/* eslint-disable-next-line react/prop-types,react/destructuring-assignment */}
       <Hero heroItems={props.heroItems} />
-      <Services services={props.services} />
       <VerticalFeatures/>
-      <About />
+      <Services services={props.services} />
+
     </fragment>
 
   );

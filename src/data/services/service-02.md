@@ -1,7 +1,7 @@
 ---
-title: "Students"
+title: "Student Volunteers"
 icon: "TbApple"
 redirect: https://discord.gg/F2YWZtthM9
 ---
 
-Get Notifications and easy access to Volunteering opportunities 
+Students with a passion for community service can have greater access to local volunteer opportunities. 

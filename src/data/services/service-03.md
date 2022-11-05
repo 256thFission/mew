@@ -1,7 +1,7 @@
 ---
-title: 'How It works'
+title: 'Learn More'
 icon: 'TbArrowsRandom'
-redirect: /
+redirect: /about/#infog
 ---
 
-IDK what to put here, Let An decide probably
+Click here to learn more about our platform

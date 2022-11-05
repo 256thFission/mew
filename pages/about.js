@@ -9,12 +9,11 @@ function AboutPage(props) {
     <fragment>
 
       <PageBanner />
-      <About />
-      {/* eslint-disable-next-line react/destructuring-assignment,react/prop-types */}
-      <Services services={props.services} />
-      <iframe src='infog.pdf' className="w-full px-40 aspect-square py-10" />
-      {/* eslint-disable-next-line react/destructuring-assignment,react/prop-types */}
       <Team teamItems={props.teamItems} />
+      {/* eslint-disable-next-line react/destructuring-assignment,react/prop-types */}
+      <iframe src='infog.pdf' className="w-full px-40 aspect-square py-10" id="infog"/>
+      {/* eslint-disable-next-line react/destructuring-assignment,react/prop-types */}
+
     </fragment>
   );
 }

@@ -1,7 +1,7 @@
 ---
-title: "Charities"
+title: "Non-Profits"
 icon: "TbHeartHandshake"
-redirect: /
+redirect: /contact
 ---
 
-Our platform allows Nonprofits to access hundreds of Proven High School Volunteers with the click of a button
+Our platform allows local organizations to access to a wide pool of experienced student volunteers all over Kern County. 

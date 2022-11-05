@@ -81,44 +81,18 @@ function HeaderTwo() {
                   </li>
                   <li
                     className={
-                                            router.pathname == '/posts'
-                                              ? 'active'
-                                              : ''
-                                        }
-                  >
-                    <Link href="/posts">
-                      <a>
-                        <span>Posts</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li
-                    className={
                                             router.pathname == '/contact'
                                               ? 'active'
                                               : ''
                                         }
                   >
-                    <a>
-                      <button onClick={(
-                        <Dialog
-                          open
-                          style={{ width: '200px', marginLeft: '40%', backgroundColor: 'transparent' }}
-                          overlayStyle={{ backgroundColor: 'transparent' }}
-                          title="Loading"
-                          titleStyle={{
-                            paddingTop: '0px', paddingLeft: '45px', fontSize: '15px', lineHeight: '40px',
-                          }}
-                        >
-                          pizza
-                        </Dialog>
-
-                      )}
-                      >
-                        CONTACT
-                      </button>
-                    </a>
+                    <Link href="/contact">
+                      <a>
+                        <span>Contact</span>
+                      </a>
+                    </Link>
                   </li>
+
                 </ul>
               </nav>
             </div>

@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import theme from '../utils/theme';
-import {withProtected} from "../context/route";
+import { withProtected } from '../context/route';
 
 const font = "'Roboto Mono', monospace";
 
@@ -248,15 +248,14 @@ function Form({ handleClose }) {
               </Box>
               <div>
                 <Button
-                  variant="contained"
                   color="secondary"
-                  fullWidth
                   size="large"
+                  variant="outlined"
+                  fullWidth = {true}
                   onClick={
 
                   handleSubmit(onSubmit)
 }
-                  sx={{ width: 500, padding: 1, margin: 2 }}
                 >
                   Submit
                 </Button>

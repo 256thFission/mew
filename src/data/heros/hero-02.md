@@ -6,6 +6,6 @@ twitterIcon: 'FaTwitter'
 discordIcon: 'FaDiscord'
 googleIcon: 'FaGoogle'
 heroCategory: KVU <br /> 
-heroTitle: Building Community <br />Bridges
+heroTitle: Connecting the <br />Community
 heroContactInfo: kernvolunteersunited@gmail.com
 ---
