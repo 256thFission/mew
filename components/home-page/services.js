@@ -12,7 +12,7 @@ function Services({ services }) {
             <div className="service-content xl:w-[490px] w-full ml-auto">
 
               <h2 className="title text-black lm:text-[42px] lm:leading-[50px] text-[32px] mb-[60px]">
-                Helping the Kern community
+                Helping the Kern County Community
               </h2>
               <div className="fixed-md:grid fixed-md:grid-cols-2 grid max-md:gap-[25px]">
                 {services?.map((service) => {
@@ -52,7 +52,7 @@ function Services({ services }) {
           <div className="lg:col-span-6">
             <div className="service-image flex justify-end w-full lg:h-full h-[679px] relative">
               <Image
-                src="/images/service/1.jpg"
+                src="/images/service/sunsetgroup.jpeg"
                 alt="Service Image"
                 quality={70}
                 layout="fill"

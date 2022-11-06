@@ -9,7 +9,7 @@ function VerticalFeatures() {
     // >
       <div>
       <VerticalFeatureRow
-        title="The KVU Mission"
+        title="The Mission of Kern Volunteers United"
         description="We aim to provide our free, accessible virtual platform for non-profit organizations in Kern County to access local high school volunteers dedicated to community service.  "
         image="/images/service/IMG_5203.jpg"
         imageAlt="Wow put an image here"

@@ -17,7 +17,7 @@ function VerticalFeatureRow(props: IVerticalFeatureRowProps) {
     'items-center',
     'max-w-screen-lg',
     'mx-auto',
-    'bg-Tanish',
+    'bg-white',
     'rounded-md',
     ' px-1',
     'border-3',
