@@ -10,12 +10,25 @@ textarea:focus-visible {
     @apply outline;
 }
 
+@font-face {
+    font-family: "Broadway";
+    src: url('../fonts/Broadway Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url('../fonts/Oswald-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+
 @layer base {
     input,
     textarea {
         @apply placeholder:text-[#595959] fixed-xs:text-[14px];
     html {
-        font-family: ui-sans-serif, sans-serif;
+        font-family: Broadway, Oswald;
     }
     }
 }
@@ -24,7 +37,7 @@ textarea:focus-visible {
 /*  - header
 /*----------------------------------------*/
 .main-menu {
-    @apply flex justify-start uppercase leading-8 text-[15px] text-white
+    @apply flex justify-start uppercase leading-8 text-[15px] text-main  ;
 }
 .main-menu li a {
     @apply block pr-[45px];
@@ -58,7 +71,7 @@ textarea:focus-visible {
     @apply bg-[#111111];
 }
 .sticky-style-2 {
-    @apply bg-bluemain   ;
+    @apply bg-secondary  ;
 }
 
 .language-list {
@@ -112,7 +125,7 @@ textarea:focus-visible {
 }
 
 .boxed-btn {
-    @apply relative inline-block text-black py-[15px] px-[40px] overflow-hidden rounded-none bg-primary uppercase z-[2] content-none before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[-1] before:opacity-0 before:bg-[#262626] before:transition before:duration-[0.4s] before:scale-x-[0.2] before:scale-y-[1] hover:before:opacity-100 hover:before:scale-100 hover:text-white;
+    @apply relative inline-block text-black py-[15px] px-[40px] overflow-hidden rounded-none bg-primary uppercase z-[2] content-none before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[-1] before:opacity-0 before:bg-[#262626] before:transition before:duration-[0.4s] before:scale-x-[0.2] before:scale-y-[1] hover:before:opacity-100 hover:before:scale-100 hover:text-red-600;
 }
 .boxed-outline-btn {
     @apply relative inline-block text-[14px] leading-[30px] p-[11px_32px] border border-[#969696] uppercase before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[-1] before:opacity-0 before:bg-primary before:transition before:duration-[0.4s] before:scale-x-[0.2] before:scale-y-[1] hover:before:opacity-100 hover:before:scale-100 hover:border-primary;
@@ -169,10 +182,10 @@ textarea:focus-visible {
     @apply absolute left-[40px] bottom-[40px] z-[2];
 }
 .project-category {
-    @apply text-white text-[14px] leading-6 uppercase block mb-[15px] transition duration-500 group-hover:text-black;
+    @apply text-main text-[14px] leading-6 uppercase block mb-[15px] transition duration-500 group-hover:text-black;
 }
 .project-title {
-    @apply text-white text-[36px] leading-[43px] transition duration-500 group-hover:text-black;
+    @apply text-main text-[36px] leading-[43px] transition duration-500 group-hover:text-black;
 }
 /*----------------------------------------*/
 /*  - post
@@ -317,3 +330,279 @@ textarea:focus-visible {
     background-position: center;
     background-size: cover;
 }
+
+/*This is the copy pasted styling*/
+
+
+}
+:root {
+    --color-light: #fcd252;
+    --color-dark: white;
+    --color-signal: #446168;
+
+    --color-background: white;
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+
+    line-height: 1.4;
+
+    font-family: 'Inter', Oswald;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    background: var(--color-background);
+    font-weight: 300;
+    padding: 0 calc(var(--size-bezel) * 3);
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+}
+
+mark {
+    background: var(--color-accent);
+    color: var(--color-text);
+    font-weight: bold;
+    padding: 0 0.2em;
+}
+
+.card {
+    background: var(--color-background);
+    padding-left: 20px;
+    padding-bottom: 7px;
+    padding-top: 22px;
+    padding-right: 24px;
+    margin-top: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+
+&--inverted {
+     --color-background: var(--color-dark);
+     color: var(--color-light);
+     --color-shadow: var(--color-accent);
+ }
+
+&--accent {
+     --color-background: var(--color-signal);
+     --color-accent: var(--color-light);
+     color: var(--color-dark);
+ }
+
+*:first-child {
+    margin-top: 0;
+}
+}
+
+
+.l-design-widht {
+    max-width: 40rem;
+    padding: 1rem;
+}
+
+.input {
+    position: relative;
+
+&__label {
+     position: relative;
+     left: 0;
+     top: 0;
+     padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
+     margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
+     background: pink;
+     white-space: nowrap;
+     transform: translate(0,0);
+     transform-origin: 0 0;
+     background: var(--color-background);
+     transition: transform 120ms ease-in;
+     font-weight: bold;
+     line-height: 1.2;
+ }
+&__field {
+     box-sizing: border-box;
+     display: block;
+     width: 100%;
+     border: 3px solid #fcd252;
+     padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+     /*color: currentColor;*/
+     color: #446168;
+     background: transparent;
+     border-radius: var(--size-radius);
+     text-color: #446168;
+
+&:focus,
+&:not(:placeholder-shown) {
+& + .input__label {
+      transform: translate(.25rem, -65%) scale(.8);
+      color: #f59b56
+      /*color: var(--color-accent);*/
+  }
+}
+}
+}
+
+
+.button-group {
+    margin-top: calc(var(--size-bezel) * 2.5);
+}
+
+button {
+    color: currentColor;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--size-radius);
+    font-weight: 900;
+    box-shadow: 5px 5px teal;
+&[type=reset]{
+     background: var(--color-background);
+     font-weight: 200;
+ }
+}
+
+button + button {
+    margin-left: calc(var(--size-bezel) * 2);
+}
+
+.icon {
+    display: inline-block;
+    width: 1em; height: 1em;
+    margin-right: .5em;
+}
+
+.hidden {
+    display: none;
+}
+
+
+strong {
+    position: relative;
+    top: -250px;
+    left: -10px;
+    font-family: Broadway;
+}
+
+
+.Sample__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.Sample__container > * > * {
+    margin: 10px;
+}
+
+.Sample__container__content {
+    display: flex;
+    max-width: 100%;
+    flex-basis: 420px;
+    flex-direction: column;
+    flex-grow: 100;
+    align-items: stretch;
+}
+.react-calendar {
+    min-width: 60px;
+    z-index: 1000;
+    padding: 12px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.react-datetime-picker__calendar{
+    min-width: 400px;
+}
+.react-calendar_tile{
+    background: whitesmoke;
+}
+
+.react-calendar__month-view__days__day{
+    background: white;
+    /*padding: 2px;*/
+
+}
+
+.react-calendar_navigation_arrow{
+    background: whitesmoke;
+}
+
+.react-calendar_navigation_arrow{
+    background: whitesmoke;
+}
+
+.react-calendar__month-view__weekdays{
+    border: 2px dotted;
+    color: #44afa9;
+}
+
+.react-calendar__navigation button {
+    min-width: 30px;
+    max-width: 35;
+    background: none;
+}
+.glassy {
+    padding: 12px;
+    background: rgba( 255, 255, 255, 0.45 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 10px;
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+    break-inside: avoid;
+}
+
+.wave-container {
+    background-image: url('../pages/scatter.svg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 90vh;
+    /*margin-top: 20px;*/
+}
+.wave-container > svg {
+    display: block;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.react-icons {
+    vertical-align: middle;
+    size: 3em;
+}
+
+.contact_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+/*.react-calendar__month-view__days{*/
+/*    background: #669900;*/
+/*}*/
+
+/*strong::before {*/
+/*    !* Highlight color *!*/
+/*    background-color: #44afa9;*/
+
+/*    content: "";*/
+/*    position: absolute;*/
+/*    width: calc(100% + 4px);*/
+/*    height: 60%;*/
+/*    left: -2px;*/
+/*    bottom: 0;*/
+/*    z-index: -1;*/
+/*    transform: rotate(-2deg);*/
+/*}*/

@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
-  spacing: 4,
+  // spacing: 4,
   palette: {
     type: 'light',
     primary: {

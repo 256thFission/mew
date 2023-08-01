@@ -8,21 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bluemain:'#2E3191',
         Tanish:'#EACAAE',
         greeny:'#427E3A',
         primary: '#88c4bd',
-        secondary: '#333333',
-        azure: '#eef2f2',
+        secondary: '#446168',
         sky: '#00ccff',
-        colm: '#90bede',
-        brit: '#68EDC6',
-        lavender: '#E5E1EE',
-        blucyan: '#dffdff',
-        main: '#111d4a',
-        eton: '#8BBF9F',
-        indep: '#668F80',
         paste: '#2B4570',
+        accent: '#F7824f',
+        main:  '#44afa9',
+        baba:  '#f59b56',
 
       },
       padding: {

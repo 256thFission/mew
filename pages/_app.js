@@ -2,8 +2,9 @@ import '../styles/globals.css';
 import { createTheme } from '@mui/material';
 import Head from 'next/head';
 import '@fontsource/roboto-mono';
+import MultiStep from 'react-multistep';
 import HeaderTwo from '../components/HeaderTwo';
-import {AuthContextProvider} from "../context/AuthContext";
+import { AuthContextProvider } from '../context/AuthContext';
 
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
@@ -19,7 +20,6 @@ function MyApp({ Component, pageProps }) {
           <link rel="shortcut icon" href="../favicon.ico" />
         </Head>
         <HeaderTwo />
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
 
         {/* </Layout> */}

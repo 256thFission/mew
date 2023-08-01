@@ -34,9 +34,9 @@ function HeaderTwo() {
       <header className="header-section sticky-style-2  ">
         <div className="custom-container container">
           <div className="grid grid-cols-12 items-center leading-[120px]">
-            <div className="lg:col-span-2 col-span-3">
+            {/*<div className="lg:col-span-2 col-span-3">*/}
               <DarkLogo />
-            </div>
+            {/*</div>*/}
             <div className="lg:col-span-7 lg:block hidden">
               <nav>
                 <ul className="main-menu">
