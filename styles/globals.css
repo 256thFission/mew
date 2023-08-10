@@ -448,6 +448,9 @@ button + button {
 h1, h2, h3 {
     font-weight: 900;
 }
+ul li + li {
+    margin-left: 15px;
+}
 
 mark {
     background: var(--color-accent);
@@ -455,6 +458,11 @@ mark {
     font-weight: bold;
     padding: 0 0.2em;
 }
+
+.nextui-navbar-container {
+    line-height: 6vh !important;
+}
+
 
 strong {
     position: relative;
@@ -589,7 +597,7 @@ strong {
 
 .titler{
     position: absolute;
-    top:-260px;
+    top:-286px;
     margin-top: 20px;
     z-index: 50;
 }
@@ -629,6 +637,10 @@ strong {
     left: 71vw;
     top:9.5vh;
     min-width: 6vh;
+    background-color: var(--orange);
+    color: var(--slate) !important;
+    box-shadow: var(--slate) 5px 5px;
+    border-radius: 5px;
 }
 .Sample__container {
     display: flex;

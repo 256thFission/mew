@@ -56,7 +56,7 @@ function StepThree({ handleFormData, values }) {
         {' '}
         <strong className="titler "> Event Detail </strong>
       </h1>
-      <button onClick={(e) => onSubmit(e)} className="submit"> Submit </button>
+      <button onClick={(e) => onSubmit(e)} className="submit "> Submit </button>
 
     </div>
   );

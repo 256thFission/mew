@@ -37,7 +37,12 @@ function HeaderNew() {
         {/*  ACME */}
         {/* </Text> */}
       </Navbar.Brand>
-      <Navbar.Content activeColor="primary" hideIn="xs">
+      <Navbar.Content activeColor="primary" hideIn="xs"
+      css={{
+         fontSize: '17px',
+
+      }}
+      >
         <Navbar.Link
 
           href="/"
@@ -49,6 +54,7 @@ function HeaderNew() {
             '&:active': {
               color: '$redOrange',
             },
+            padding: '10'
           }}
         >
           Home
