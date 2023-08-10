@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DateTimePicker from 'react-datetime-picker';
 import 'react-datetime-picker/dist/DateTimePicker.css';
 
-function StepOne() {
+function StepOne({ handleFormData, values }) {
   const [eventname, setEventname] = useState('');
   const [volnum, setVolnum] = useState('');
   const [length, setLength] = useState('');
   // const [time, setTime] = useState('');
   const [time, onChangeTime] = useState(new Date());
   const [display, setDisplay] = useState('');
-
   const onBlur = () => {
     setDisplay(`${length} hrs`);
   };
@@ -29,8 +28,9 @@ function StepOne() {
           <input
             className="input__field min-w-lg max-w-lg "
             placeholder="July XYZ Drive"
-            onChange={(e) => setEventname(e.target.value)}
-            value={eventname}
+            onChange={handleFormData('eventName')}
+            value={values.eventName}
+            onBlur={handleFormData('eventName')}
           />
           <span className="input__label ">Event</span>
         </div>
@@ -39,8 +39,9 @@ function StepOne() {
             className="input__field min-w-lg max-w-lg"
             placeholder="5"
             type="number"
-            onChange={(e) => setVolnum(e.target.value)}
-            value={volnum}
+            onChange={handleFormData('volunteer')}
+            value={values.volunteer}
+            onBlur={handleFormData('volunteer')}
           />
           <span className="input__label "># of Volunteers</span>
         </div>
@@ -51,12 +52,13 @@ function StepOne() {
             className="input__field mt-4 max-w-lg"
             type="number"
             placeholder="5 hrs"
-            onChange={(e) => setLength(e.target.value)}
-            value={length}
+            onChange={handleFormData('length')}
+            value={values.length}
+            onBlur={handleFormData('length')}
           />
           <span className="input__label ">Length (hrs)</span>
         </div>
-        <div className="self-start z-10">
+        <div className=" flex !justify-center z-10 pr-15%">
           <DateTimePicker
             amPmAriaLabel="Select AM/PM"
             calendarAriaLabel="Toggle calendar"
@@ -67,16 +69,18 @@ function StepOne() {
             minuteAriaLabel="Minute"
             monthAriaLabel="Month"
             nativeInputAriaLabel="Date and time"
-            onChange={onChangeTime}
+            onChange={(e) =>onChangeTime()}
             value={time}
+            onBlur = {(e) => onChangeTime()}
             yearAriaLabel="Year"
-            className="z-20 position-absolute"
+            disableCalendar={true}
+            className="z-20 position-relative !justify-self-center "
           />
         </div>
       </div>
-      <h1 className="text-mains   text-3xl ">
+      <h1 className="text-mains absolute  text-3xl ">
         {' '}
-        <strong> Event Details </strong>
+        <strong className="titler1 min-w-lg"> Basics </strong>
       </h1>
     </div>
   );

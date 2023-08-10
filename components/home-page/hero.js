@@ -8,7 +8,7 @@ import 'swiper/swiper-bundle.css';
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 function Hero({ heroItems }) {
   const heroImage = 'relative w-full md:h-[980px] h-[725px] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-30 before:z-[1] before:pointer-events-none overflow-hidden';
-  const heroContent = 'absolute sm:w-[calc(100%_-_100px)] left-auto top-1/2 transform translate-y-[-50%] z-[2]';
+  const heroContent = ' font-Broadway absolute sm:w-[calc(100%_-_100px)] left-auto top-1/2 transform translate-y-[-50%] z-[2]';
   const homedate = new Date().toLocaleString('default', { month: 'short' });
   return (
     <Swiper
@@ -40,26 +40,14 @@ function Hero({ heroItems }) {
               />
             </div>
             <div className="container custom-container">
-              <div className={heroContent}>
+                <div className={heroContent}>
+
                 <div className="hero-inner grid grid-cols-12">
                   <div className="hero-year col-span-2 text-white md:block hidden">
                     <div className="social-holder flex flex-col justify-between h-full">
-                      <span>{`${homedate} ${heroItem?.heroYear}`}</span>
+                      <span>{`${homedate} 2023`}</span>
                       <ul className="social-box mb-[-140px]">
-                        <li className="mb-[25px]">
-                          <Link href="https://example.com/">
-                            <a target="_blank" aria-label="Discord">
-                              <DiscordIcon />
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="https://example.com/">
-                            <a target="_blank" aria-label="Google">
-                              <GoogleIcon />
-                            </a>
-                          </Link>
-                        </li>
+
                       </ul>
                     </div>
                   </div>
@@ -78,7 +66,7 @@ function Hero({ heroItems }) {
                     />
                     <div className="hero-slidedown delay-[1200ms]">
                       <Link href="/about">
-                        <a className="boxed-btn text-[18px] leading-[30px]">
+                        <a className="boxed-btn text-[18px] font-Oswald  leading-[30px]">
                           More About Us
                         </a>
                       </Link>
@@ -86,20 +74,14 @@ function Hero({ heroItems }) {
                   </div>
                 </div>
               </div>
-              <div className="info text-white hover:text-primary transition-all text-[14px] uppercase absolute bottom-[100px] sm:right-[70px] right-auto z-[2]">
-                <Link href="mailto:KernVolunteersUnited@gmail.com">
+              <div className="info text-accent font-Oswald hover:text-primary transition-all text-[14px] uppercase absolute bottom-[100px] sm:right-[70px] right-auto z-[2]">
+                <Link href="mailto:KernVolunteersUnited@gmail.com" className="font-Oswald text-accent">
                   {heroItem?.heroContactInfo}
                 </Link>
               </div>
             </div>
             <div className="mouse-btn-wrap absolute bottom-[30px] left-1/2 -translate-x-1/2">
-              <Link href="#about" passHref>
-                <ul className="mouse-btn-down">
-                  <li className="chevron animate-move" />
-                  <li className="chevron animate-move2" />
-                  <li className="chevron animate-move3" />
-                </ul>
-              </Link>
+
             </div>
           </SwiperSlide>
         );

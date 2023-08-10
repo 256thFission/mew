@@ -11,18 +11,25 @@ textarea:focus-visible {
 }
 
 @font-face {
-    font-family: "Broadway";
+    font-family: Broadway;
     src: url('../fonts/Broadway Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Oswald";
+    font-family: Oswald;
     src: url('../fonts/Oswald-Light.ttf');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: Martel;
+    src: url('../fonts/Martel-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 @layer base {
     input,
     textarea {
@@ -39,11 +46,30 @@ textarea:focus-visible {
 .main-menu {
     @apply flex justify-start uppercase leading-8 text-[15px] text-main  ;
 }
+
+.ul{
+ column-count: 4;
+}
+.main-menu{
+    column-count: 4;
+}
+
+.main-menu li {
+    flex: 1;
+    padding: 10px 0;
+    margin: 0;
+    @apply col-span-2;
+}
+
 .main-menu li a {
-    @apply block pr-[45px];
+    @apply block pr-[45px] col-span-2;
+}
+
+.main-menu li a{
+    padding: 0;
 }
 .main-menu li a span {
-    @apply relative block before:absolute before:left-0 before:bottom-0 before:right-0 before:h-[1px] before:opacity-0 before:bg-Tanish before:transform before:scale-x-[0.2] before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-x-100;
+    @apply relative col-span-2 block before:absolute before:left-0 before:bottom-0 before:right-0 before:h-[1px] before:opacity-0 before:bg-Tanish before:transform before:scale-x-[0.2] before:transition before:duration-500 hover:before:opacity-100 hover:before:scale-x-100;
 }
 .main-menu li.active a span {
     @apply before:opacity-100 before:scale-x-100;
@@ -332,9 +358,6 @@ textarea:focus-visible {
 }
 
 /*This is the copy pasted styling*/
-
-
-}
 :root {
     --color-light: #fcd252;
     --color-dark: white;
@@ -343,10 +366,17 @@ textarea:focus-visible {
     --color-background: white;
     --color-text: var(--color-dark);
     --color-accent: var(--color-signal);
-
+    --card-primary: #555BFF;
     --size-bezel: .5rem;
     --size-radius: 4px;
 
+    --green: #1FC11B;
+    --yellow: #FCD252;
+    --orange: #F59B56;
+    --red: #FF5555;
+    --rOrgange: #F8724F;
+    --primaryTeal: #44AFA9;
+    --slate: #446169;
     line-height: 1.4;
 
     font-family: 'Inter', Oswald;
@@ -354,7 +384,65 @@ textarea:focus-visible {
     color: var(--color-text);
     background: var(--color-background);
     font-weight: 300;
-    padding: 0 calc(var(--size-bezel) * 3);
+    padding: 0;
+}
+.react-calendar__navigation button {
+    min-width: 30px !important;
+    max-width: 35 !important;
+    background: none !important;
+}
+
+.react-calendar {
+    aspect-ratio: 5/1 !important;
+}
+
+button {
+    color: var(--slate) !important;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2) !important;
+    /*background: var(--primaryTeal) !important;*/
+    border: 0px !important;
+    border-radius: var(--primaryTeal) ;
+    font-weight: 900;
+    box-shadow: 5px 5px teal;
+    position: relative !important;
+&[type=reset]{
+     background: var(--color-background);
+     font-weight: 200;
+ }
+}
+
+button + button {
+    margin-left: calc(var(--size-bezel) * 2);
+}
+
+
+:root {
+    --color-light: #fcd252;
+    --color-dark: white;
+    --color-signal: #446168;
+
+    --color-background: white;
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+    --card-primary: #555BFF;
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+
+    --green: #1FC11B;
+    --yellow: #FCD252;
+    --orange: #F59B56;
+    --red: #FF5555;
+    --rOrgange: #F8724F;
+    --primaryTeal: #44AFA9;
+    --slate: #446169;
+    line-height: 1.4;
+
+    font-family: 'Inter', Oswald;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    background: var(--color-background);
+    font-weight: 300;
+    padding: 0;
 }
 
 h1, h2, h3 {
@@ -368,6 +456,15 @@ mark {
     padding: 0 0.2em;
 }
 
+strong {
+    position: relative;
+    top: -250px;
+    left: -10px;
+    font-family: Broadway;
+    display: block !important;
+    color: var(--primaryTeal) !important;
+    text-underline: var(--red) !important;
+}
 .card {
     background: var(--color-background);
     padding-left: 20px;
@@ -390,6 +487,8 @@ mark {
      --color-accent: var(--color-light);
      color: var(--color-dark);
  }
+
+
 
 *:first-child {
     margin-top: 0;
@@ -443,28 +542,37 @@ mark {
 }
 }
 
+.rapper{
+    border-radius: var(--size-radius);
+    border: 3px solid #fcd252 !important;
+    box-sizing: border-box;
+    padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+    text-color: #446168 !important;
+    color: #446168;
+    width: 50%;
+}
+.{
+    display:none;
+}
+
+.react-datetime-picker__button{
+    box-shadow: none;
+    margin: 1px;
+}
+.react-datetime-picker__wrapper{
+    border-radius: var(--size-radius);
+    border: 3px solid #fcd252 !important;
+    box-sizing: border-box;
+    padding: calc(var(--size-bezel) * 1.0) var(--size-bezel);
+    text-color: #446168 !important;
+    color: #446168;
+    width: 100%;
+    }
 
 .button-group {
     margin-top: calc(var(--size-bezel) * 2.5);
 }
 
-button {
-    color: currentColor;
-    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
-    background: var(--color-accent);
-    border: none;
-    border-radius: var(--size-radius);
-    font-weight: 900;
-    box-shadow: 5px 5px teal;
-&[type=reset]{
-     background: var(--color-background);
-     font-weight: 200;
- }
-}
-
-button + button {
-    margin-left: calc(var(--size-bezel) * 2);
-}
 
 .icon {
     display: inline-block;
@@ -477,14 +585,51 @@ button + button {
 }
 
 
-strong {
-    position: relative;
-    top: -250px;
-    left: -10px;
-    font-family: Broadway;
+
+
+.titler{
+    position: absolute;
+    top:-260px;
+    margin-top: 20px;
+    z-index: 50;
 }
 
+.titler2{
+    position: absolute;
+    top:-240px;
+    z-index: 50;
+}
 
+.go3842760039{
+ display: none !important;
+}
+
+.go2335061104{
+    display: none !important;
+}
+
+.go433304200{
+    display: none !important;
+}
+
+.titler1{
+    position: absolute;
+    top:-240px;
+    z-index: 50;
+    min-width: 60px !important;
+}
+
+.blurb{
+    position: absolute;
+    left: 24vh;
+}
+
+.submit{
+    position: absolute;
+    left: 71vw;
+    top:9.5vh;
+    min-width: 6vh;
+}
 .Sample__container {
     display: flex;
     flex-direction: row;
@@ -549,15 +694,104 @@ strong {
     max-width: 35;
     background: none;
 }
+
+.light-theme {
+    --nextui-colors-background: transparent;
+}
 .glassy {
     padding: 12px;
-    background: rgba( 255, 255, 255, 0.45 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background: rgba( 255, 255, 255, 0.45 ) !important;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )  !important;
     backdrop-filter: blur( 8px );
     -webkit-backdrop-filter: blur( 8px );
     border-radius: 10px;
     border: 2px solid rgba( 255, 255, 255, 0.18 );
     break-inside: avoid;
+}
+
+
+
+.nextui-navbar-container{
+    background-color: #ffffff !important;
+    min-width: 100vw;
+    font-family: Broadway;
+    line-height: 200%;
+    opacity: 98%;
+}
+/* THE STACK*/
+
+
+.stack {
+    background-color: white;
+    display: block;
+    width: 400px;
+    min-height: 200px;
+    border: 3px solid var(--primaryTeal);
+    padding: 15px;
+    margin: 70px auto 50px auto;
+    box-shadow: 15px -15px 0 -3px var(--color-background), 15px -15px var(--yellow ),
+    30px -30px 0 -3px var(--color-background), 30px -30px var(--orange ),
+    45px -45px 0 -3px var(--color-background), 45px -45px var( --red);
+    /*60px -60px 0 -3px var(--color-background), 60px -60px var();*/
+    transition: box-shadow 1s, top 1s, left 1s,
+                transform 2s ease-out,
+                margin-top 2s ease-out;
+    ;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transform: translate3d(0,0,0);
+
+}
+.stack:hover {
+    top: -40px;
+    left: 40px;
+    margin-top: 120px;
+    transform: scale(1.3);
+    box-shadow: 0 0 0 -3px var(--color-background), 0 0 0 0 var(--yellow),
+    0 0 0 -3px var(--color-background), 0 0 0 0  var(--orange),
+    0 0 0 -3px var(--color-background), 0 0 0 0  var(--red);
+    /*0 0 0 -3px  var(--color-background), 0 0 0 0  var();*/
+}
+
+
+/*:root {*/
+/*    --primary: #555BFF;*/
+/*    --secondary: #22D2A0;*/
+/*    --background: white;*/
+/*    --green: #1FC11B;*/
+/*    --yellow: #FFD913;*/
+/*    --orange: #FF9C55;*/
+/*    --red: #FF5555;*/
+/*}*/
+
+/**{*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*body {*/
+/*    background-image: radial-gradient(var(--secondary) 30%, var(--background) 30%);*/
+/*    background-size: 2px 3px;*/
+/*    font-family: "Archivo", sans-serif;*/
+/*    color: var(--primary);*/
+/*}*/
+.arrows{
+    position: absolute;
+}
+.stack p {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.stack h2 {
+    font-size: 14px;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
 }
 
 .wave-container {
@@ -606,3 +840,35 @@ html, body {
 /*    z-index: -1;*/
 /*    transform: rotate(-2deg);*/
 /*}*/
+
+.iconContainer {
+    position: relative;
+    width: max-content;
+    height: max-content;
+}
+
+.icon {
+    position: absolute;
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+}
+
+.icon:nth-child(1) {
+    left: 0;
+    top: 0;
+    align-self: end;
+}
+
+.icon:nth-child(2) {
+    left: 3px; /* Adjust as needed */
+    top: -3px; /* Adjust as needed */
+}
+
+.icon:nth-child(3) {
+    right: 40px; /* Adjust as needed */
+    top: 40px; /* Adjust as needed */
+}
+
+.shadowy{
+    text-shadow: -2px 1px 0 #44afa9;
+}

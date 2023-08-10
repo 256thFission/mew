@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth:{
+        '2xs': '20px',
+      },
       colors: {
         Tanish:'#EACAAE',
         greeny:'#427E3A',
@@ -58,12 +61,15 @@ module.exports = {
     fontFamily: {
       inter: ['Inter, sans-serif'],
       heebo: ['Heebo, sans-serif'],
-      body: ['sans-serif']
+      body: ['sans-serif'],
+      Broadway: "Broadway",
+      Martel: "Martel",
+      Oswald: "Oswald",
     },
 
     container: {
       center: true,
-      padding: '15px',
+      padding: '0px',
       screens: {
         sm: '480px',
         lm: '575px',

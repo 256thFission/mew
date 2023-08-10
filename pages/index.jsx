@@ -4,8 +4,9 @@ import Hero from '../components/home-page/hero';
 import { getAllItems, getFeaturedItems } from '../public/lib/items-util';
 import About from '../components/home-page/about';
 import { VerticalFeatures } from '../components/features/VerticalFeatures.tsx';
-import Services from "../components/home-page/services.js";
-
+import Services from '../components/home-page/services.js';
+import cardStack from '../components/cardStack';
+import Arrow from './components/arrow';
 
 export default function Home(props) {
   return (
@@ -17,8 +18,20 @@ export default function Home(props) {
       </Head>
       {/* eslint-disable-next-line react/prop-types,react/destructuring-assignment */}
       <Hero heroItems={props.heroItems} />
-      <VerticalFeatures/>
-      <Services services={props.services} />
+      <div className="stack">
+      <p className="font-Broadway underline decoration-accent underline-offset-4 "> Our Mission      </p>
+        <div className="grid-cols-3 grid gap-2">
+      <h2 className="max-w-xs col-span-2 font-Marte leading-relaxed">
+    Through our platform, we connect student leaders with non-profits in need.
+      </h2>
+
+          <div className="flex static flex-col max-h-40 items-start justify-items-start !position-relative">
+              <span className="font-Oswald text-5xl max-w-2xs text-base/8 shadowy text-accent">Join us </span>
+          <Arrow className=" arrows !justify-self-end  z-10"/>
+          </div>
+        </div>
+    </div>
+      {/*<Services services={props.services} />*/}
 
     </fragment>
 

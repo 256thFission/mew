@@ -33,90 +33,69 @@ function HeaderTwo() {
     <>
       <header className="header-section sticky-style-2  ">
         <div className="custom-container container">
-          <div className="grid grid-cols-12 items-center leading-[120px]">
-            {/*<div className="lg:col-span-2 col-span-3">*/}
+          <div className="grid grid-cols-12 items-center leading-[120px] text-main">
+            <div className="lg:col-span-2 col-span-3">
               <DarkLogo />
-            {/*</div>*/}
-            <div className="lg:col-span-7 lg:block hidden">
-              <nav>
-                <ul className="main-menu">
-                  <li
-                    className={
-                                            router.pathname === '/'
-                                              ? 'active'
-                                              : ''
-                                        }
-                  >
-                    <Link href="/">
-                      <a>
-                        <span>Home</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li
-                    className={
-                                            router.pathname == '/about'
-                                              ? 'active'
-                                              : ''
-                                        }
-                  >
-                    <Link href="/about">
-                      <a>
-                        <span>About</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li
-                    className={
+            </div>
+             <div className="  text-cyan-600">
+            <nav>
+              <ul className="main-menu col-4 col-span-4">
+                <li
+                  className={'col-span-4',
+                  router.pathname === '/'
+                    ? 'active'
+                    : ''}
+                >
+                  <Link href="/">
+                    <a>
+                      <span>Home</span>
+                    </a>
+                  </Link>
+                </li>
+                <li
+                  className={'col-span-1',
+                  router.pathname == '/about'
+                    ? 'active'
+                    : ''}
+                >
+                  <Link href="/about">
+                    <a>
+                      <span>About</span>
+                    </a>
+                  </Link>
+                </li>
+                <li
+                  className={ 'col-span-1 col-start-4',
                                             router.pathname == '/form'
                                               ? 'active'
                                               : ''
                                         }
-                  >
-                    <Link href="/form">
-                      <a>
-                        <span>Event Creator</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li
-                    className={
+                >
+                  <Link href="/form">
+                    <a>
+                      <span>Event Creator</span>
+                    </a>
+                  </Link>
+                </li>
+                <li
+                  className={
                                             router.pathname == '/contact'
                                               ? 'active'
                                               : ''
                                         }
-                  >
-                    <Link href="/contact">
-                      <a>
-                        <span>Contact</span>
-                      </a>
-                    </Link>
-                  </li>
+                >
+                  <Link href="/contact">
+                    <a>
+                      <span>Contact</span>
+                    </a>
+                  </Link>
+                </li>
 
-                </ul>
-              </nav>
-            </div>
-            <div />
-            <div />
-            <div />
-            {/* <div className="lg:col-span-3 col-span-6"> */}
-            {/*  <div className={`outer-box ${headerCss}`}> */}
-            {/*    <ul className="language-list"> */}
-            {/*      <li> */}
-            {/*        <Link href="/login">Login</Link> */}
-            {/*      </li> */}
+              </ul>
+            </nav>
+             </div>
 
-            {/*    </ul> */}
-            {/*    <ul className="language-list" /> */}
-            {/*    <div className="offcanvas-area"> */}
-            {/*      <div className="offcanvas"> */}
-            {/*        <button className="menu-bars flex text-[20px]"> */}
-            {/*          <FaBars onClick={showOffcanvas} /> */}
-            {/*        </button> */}
-            {/*      </div> */}
-            {/*    </div> */}
-            {/*  </div> */}
-            {/* </div> */}
+            <div />
           </div>
         </div>
       </header>

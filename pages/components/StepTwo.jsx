@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function StepTwo() {
+function StepTwo( {handleFormData, values }) {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [org, setOrg] = useState('');
@@ -14,8 +14,9 @@ function StepTwo() {
             className="input__field min-w-lg max-w-lg "
             placeholder="test@mailbox.com"
             type="email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
+            onChange={handleFormData('email')}
+            value={values.email}
+            onBlur={handleFormData('email')}
           />
           <span className="input__label ">Email</span>
         </div>
@@ -23,8 +24,9 @@ function StepTwo() {
           <input
             className="input__field min-w-lg max-w-lg"
             placeholder="Organization name"
-            onChange={(e) => setOrg(e.target.value)}
-            value={org}
+            onChange={handleFormData('organization')}
+            value={values.organization}
+            onBlur={handleFormData('organization')}
           />
           <span className="input__label ">Organization</span>
         </div>
@@ -34,8 +36,9 @@ function StepTwo() {
           <input
             className="input__field mt-4 max-w-lg"
             placeholder="123-456-7890"
-            onChange={(e) => setPhone(e.target.value)}
-            value={phone}
+            onChange={handleFormData('phone')}
+            value={values.phone}
+            onBlur={handleFormData('phone')}
           />
           <span className="input__label ">Phone #</span>
         </div>
@@ -43,13 +46,14 @@ function StepTwo() {
           <input
             className="input__field mt-4 max-w-lg"
             placeholder="202 Volunteer Lane"
-            onChange={(e) => setLocation(e.target.value)}
-            value={location}
+            onChange={handleFormData('address')}
+            value={values.address}
+            onBlur={handleFormData('address')}
           />
           <span className="input__label ">Address</span>
         </div>
       </div>
-      <h1 className="text-mains   text-3xl "> <strong> Contact Info </strong></h1>
+      <h1 className="text-mains  relative  text-3xl "> <strong className="titler2 "> Contact Info </strong></h1>
     </div>
   );
 }
