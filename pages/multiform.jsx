@@ -3,11 +3,11 @@ import { useState } from 'react';
 // eslint-disable-next-line import/no-named-as-default
 import MultiStep from 'react-multistep';
 // eslint-disable-next-line import/no-named-as-default
-import StepOne from './components/StepOne';
+import StepOne from '../components/components/StepOne';
 // eslint-disable-next-line import/no-named-as-default
-import StepTwo from './components/StepTwo';
+import StepTwo from '../components/components/StepTwo';
 import 'react-datetime-picker/dist/DateTimePicker.css';
-import StepThree from './components/StepThree';
+import StepThree from '../components/components/StepThree';
 
 
 

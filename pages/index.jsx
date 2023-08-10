@@ -6,7 +6,7 @@ import About from '../components/home-page/about';
 import { VerticalFeatures } from '../components/features/VerticalFeatures.tsx';
 import Services from '../components/home-page/services.js';
 import cardStack from '../components/cardStack';
-import Arrow from './components/arrow';
+import Arrow from '../components/components/arrow';
 
 export default function Home(props) {
   return (

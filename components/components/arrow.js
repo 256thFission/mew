@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 function Arrow() {
   return (
-    <Link href="/contact">
+    <Link href="/pages/contact">
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a className="inline-block  justify-self-end  leading-[1] !ml-10 -!mt-50 z-40">
           <div>
