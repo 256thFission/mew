@@ -109,6 +109,7 @@ function HeaderNew() {
               color: '$yellow',
               'background-color': '$redOrange',
               'margin-right':  '$5',
+              'text-color': '$slate',
             }}
           >
             Sign Up

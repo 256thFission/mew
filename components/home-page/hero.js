@@ -74,8 +74,8 @@ function Hero({ heroItems }) {
                   </div>
                 </div>
               </div>
-              <div className="info text-accent font-Oswald hover:text-primary transition-all text-[14px] uppercase absolute bottom-[100px] sm:right-[70px] right-auto z-[2]">
-                <Link href="mailto:KernVolunteersUnited@gmail.com" className="font-Oswald text-accent">
+              <div className="info  text-main  hover:text-primary transition-all text-[14px] uppercase absolute bottom-[100px] sm:right-[70px] right-auto z-[2]">
+                <Link href="mailto:KernVolunteersUnited@gmail.com" className="font-Oswald text-accent   accent-accent">
                   {heroItem?.heroContactInfo}
                 </Link>
               </div>

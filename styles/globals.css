@@ -415,6 +415,9 @@ button + button {
     margin-left: calc(var(--size-bezel) * 2);
 }
 
+.babaex {
+    color: var(--orange) !important;
+}
 
 :root {
     --color-light: #fcd252;
@@ -457,6 +460,11 @@ mark {
     color: var(--color-text);
     font-weight: bold;
     padding: 0 0.2em;
+}
+
+.iconContainer{
+ top:-2.9vh;
+ right:1vh;
 }
 
 .nextui-navbar-container {
@@ -597,7 +605,7 @@ strong {
 
 .titler{
     position: absolute;
-    top:-286px;
+    top:-276px;
     margin-top: 20px;
     z-index: 50;
 }

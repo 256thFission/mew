@@ -8,6 +8,7 @@ import StepOne from '../components/components/StepOne';
 import StepTwo from '../components/components/StepTwo';
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import StepThree from '../components/components/StepThree';
+import { withProtected } from '../context/route';
 
 
 
@@ -68,4 +69,4 @@ const multiform = () => {
     </div>
 );
 };
-export default multiform;
+export default withProtected(multiform);

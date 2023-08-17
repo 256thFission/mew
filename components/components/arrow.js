@@ -9,8 +9,8 @@ function Arrow() {
       <a className="inline-block  justify-self-end  leading-[1] !ml-10 -!mt-50 z-40">
           <div>
               <span className="iconContainer mb-20">
-              <FaAnglesRight size="3em" color="#44afa9" className="z-10 icon"/>
-              <FaAnglesRight size="3em" color= "#F7824f" className="z-20 icon"/>
+              <FaAnglesRight size="2em" color="#44afa9" className="z-10 icon"/>
+              <FaAnglesRight size="2em" color= "#F7824f" className="z-20 icon"/>
 
               </span>
           </div>

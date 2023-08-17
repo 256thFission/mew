@@ -22,7 +22,7 @@ function SignIn() {
     setError('');
     try {
       await signIn(email, password);
-      router.push('/form');
+      router.push('/multiform');
       // eslint-disable-next-line no-shadow
     } catch (e) {
       setError(e.message);

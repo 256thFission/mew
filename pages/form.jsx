@@ -12,7 +12,6 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import theme from '../utils/theme';
-import { withProtected } from '../context/route';
 
 const font = "'Roboto Mono', monospace";
 
@@ -270,4 +269,4 @@ function Form({ handleClose }) {
   );
 }
 
-export default withProtected(Form);
+export default Form;
