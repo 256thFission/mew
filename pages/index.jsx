@@ -7,9 +7,12 @@ import { VerticalFeatures } from '../components/features/VerticalFeatures.tsx';
 import Services from '../components/home-page/services.js';
 import cardStack from '../components/cardStack';
 import Arrow from '../components/components/arrow';
+import 'react-datetime-picker/dist/DateTimePicker.css';
+
 
 export default function Home(props) {
   return (
+      //TO:DO: this is so
     <fragment>
       <Head>
         <title>Create Next App</title>

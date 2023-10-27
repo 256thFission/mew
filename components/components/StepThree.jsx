@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function StepThree({ handleFormData, values }) {
-  const [link, setLink] = useState('');
+  const [links, setLink] = useState('');
   const [description, setDescription] = useState('');
   function onSubmit(e) {
     e.preventDefault();
+    window.alert("Your event has been submitted! Volunteers will reply to you soon!")
     const formData = values;
-
     fetch('https://getform.io/f/c1e44a2a-a5c5-49ef-98a3-83715c2c1741', {
       method: 'POST',
       body: JSON.stringify(formData),
@@ -27,6 +27,7 @@ function StepThree({ handleFormData, values }) {
       });
   }
 
+
   return (
     <div className="card card--inverted">
       <div className="flex flex-col ">
@@ -35,7 +36,7 @@ function StepThree({ handleFormData, values }) {
             className="input__field min-w-xl "
             placeholder="www.Example.org"
             onChange={handleFormData('link')}
-            value={values.link}
+            value={values.links}
             onBlur={handleFormData('link')}
           />
           <span className="input__label ">Link</span>
@@ -43,7 +44,7 @@ function StepThree({ handleFormData, values }) {
         <div className="flex-1 mt-5">
           <textarea
             className="input__field min-w-lg"
-            onChange={(e) => setDescription(e.target.value)}
+            // onChange={(e) => setDescription(e.target.value)}
             onChange={handleFormData('description')}
             value={values.description}
             onBlur={handleFormData('description')}

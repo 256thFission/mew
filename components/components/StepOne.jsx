@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DateTimePicker from 'react-datetime-picker';
-import 'react-datetime-picker/dist/DateTimePicker.css';
+import Datetime from 'react-datetime';
 
 function StepOne({ handleFormData, values }) {
   const [eventname, setEventname] = useState('');
@@ -13,6 +13,9 @@ function StepOne({ handleFormData, values }) {
     setDisplay(`${length} hrs`);
   };
 
+  useEffect(() => {
+    console.log(time);
+  }, [time]);
   const onLengthChange = (e) => {
     const num = e.target.valueAsNumber;
     // eslint-disable-next-line no-restricted-globals
@@ -58,23 +61,14 @@ function StepOne({ handleFormData, values }) {
           />
           <span className="input__label ">Length (hrs)</span>
         </div>
-        <div className=" flex !justify-center z-10 pr-15%">
-          <DateTimePicker
-            amPmAriaLabel="Select AM/PM"
-            calendarAriaLabel="Toggle calendar"
-            clearAriaLabel="Clear value"
-            dayAriaLabel="Day"
-            hourAriaLabel="Hour"
-            maxDetail="minute"
-            minuteAriaLabel="Minute"
-            monthAriaLabel="Month"
-            nativeInputAriaLabel="Date and time"
-            onChange={(e) =>onChangeTime()}
-            value={time}
-            onBlur = {(e) => onChangeTime()}
-            yearAriaLabel="Year"
-            disableCalendar={true}
-            className="z-20 position-relative !justify-self-center "
+        <div className="flex-1">
+          <input
+              className="input__field !min-w-md !max-w-lg pd-0"
+              placeholder="5"
+              type="datetime-local"
+              onChange={handleFormData('dateTime')}
+              value={values.time}
+              onBlur={handleFormData('dateTime')}
           />
         </div>
       </div>

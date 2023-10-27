@@ -7,7 +7,6 @@ import Team from '../components/team/index';
 function AboutPage(props) {
   return (
     <fragment>
-
       <PageBanner />
       <Team teamItems={props.teamItems} />
       {/* eslint-disable-next-line react/destructuring-assignment,react/prop-types */}

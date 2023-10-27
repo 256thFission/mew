@@ -22,7 +22,7 @@ const multiform = () => {
     eventName: '',
     volunteer: '',
     length: '',
-    dateTime: new Date(),
+    dateTime: '',
     email:'',
     organization:'',
     phone:'',
@@ -62,8 +62,8 @@ const multiform = () => {
           {' '}
           Our support email is availible at:
         </h6>
-        <a href="https://github.com/Srdjan/react-multistep" target="_blank" rel="noreferrer" className="text-cyan-600">
-          Boeing747
+        <a href="mailto:kernvolunteersunited@gmail.com" target="_blank" rel="noreferrer" className="text-cyan-600">
+          kernvolunteersunited@gmail.com
         </a>
       </div>
     </div>

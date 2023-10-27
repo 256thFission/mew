@@ -451,9 +451,9 @@ button + button {
 h1, h2, h3 {
     font-weight: 900;
 }
-ul li + li {
-    margin-left: 15px;
-}
+/*ul li + li {*/
+/*    margin-left: 15px;*/
+/*}*/
 
 mark {
     background: var(--color-accent);
@@ -516,6 +516,7 @@ strong {
     max-width: 40rem;
     padding: 1rem;
 }
+
 
 .input {
     position: relative;

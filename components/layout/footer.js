@@ -3,10 +3,11 @@ import Link from 'next/link';
 
 function Footer() {
   return (
-    <footer className="footer-area md:pt-[120px] pt-[60px]">
-      <div className="footer-top">
+
+    <footer className="footer-area md:pt-[220px] pt-[30px]  ">
+      <div className="footer-top ">
         <div className="custom-container">
-          <div className="lm:grid xl:grid-cols-5 lm:grid-cols-12 xl:gap-x-[30px] gap-[30px]">
+          <div className="lm:grid xl:grid-cols-5 lm:grid-cols-12 xl:gap-x-[30px] gap-[30px] ">
             <div className="max-lg:col-span-12">
               <div className="footer-logo">
                 <Image
@@ -22,20 +23,19 @@ function Footer() {
                 <h2 className="title">Contact</h2>
                 <ul className="contact-info mt-[25px]">
                   <li>
-                    # bobthecat Road, Bakersfield,CA
-                    93311, US
+                    No Address Yet!
                   </li>
                   <li>
-                    <Link href="mailto:hello@Rusticstudio.co">
+                    <Link href="mailto:kernvolunteersunited@gmail.com">
                       <a className="hover:text-black transition-all">
-                        Bob@gmail.com
+                        kernvolunteersunited@gmail.com
                       </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="tel:+0084-912-3548-073">
+                    <Link href="tel:+0084-661-747-1003">
                       <a className="hover:text-black transition-all">
-                        (661)- xyz-wxyz
+                        (661)- 747-1003
                       </a>
                     </Link>
                   </li>
@@ -47,13 +47,13 @@ function Footer() {
                 <h2 className="title">Quick Links</h2>
                 <ul className="footer-list mt-[25px]">
                   <li>
-                    <Link href="/contact">Home</Link>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
                     <Link href="/contact">About Us</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Event Sign up</Link>
+                    <Link href="/multiform">Event Sign up</Link>
                   </li>
                   <li>
                     <Link href="/about">Feedback</Link>
@@ -62,28 +62,28 @@ function Footer() {
               </div>
             </div>
             <div className="fixed-lg:col-span-3 fixed-md:col-span-3 fixed-lm:col-span-6 max-sm:pt-[30px]">
-              <div className="footer-widget-item">
-                <h2 className="title">Help Center</h2>
-                <ul className="footer-list mt-[25px]">
-                  <li>
-                    <Link href="/about">FAQs</Link>
-                  </li>
-                  <li>
-                    <Link href="/about">
-                      Terms & Conditions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about">
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/contact">Help</Link>
-                  </li>
+              {/*<div className="footer-widget-item">*/}
+              {/*  <h2 className="title">Help Center</h2>*/}
+              {/*  <ul className="footer-list mt-[25px]">*/}
+              {/*    <li>*/}
+              {/*      <Link href="/about">FAQs</Link>*/}
+              {/*    </li>*/}
+              {/*    <li>*/}
+              {/*      <Link href="/about">*/}
+              {/*        Terms & Conditions*/}
+              {/*      </Link>*/}
+              {/*    </li>*/}
+              {/*    <li>*/}
+              {/*      <Link href="/about">*/}
+              {/*        Privacy Policy*/}
+              {/*      </Link>*/}
+              {/*    </li>*/}
+              {/*    <li>*/}
+              {/*      <Link href="/contact">Help</Link>*/}
+              {/*    </li>*/}
 
-                </ul>
-              </div>
+              {/*  </ul>*/}
+              {/*</div>*/}
             </div>
           </div>
         </div>
@@ -126,22 +126,22 @@ function Footer() {
                 </ul>
               </div>
               <div className="md:col-span-2">
-                <ul className="footer-language flex md:justify-end justify-center">
-                  <li className="mr-8">
-                    <Link href="/about">
-                      <a className="text-[#30373E] text-[14px] leading-6 uppercase transition-all hover:text-[#263a4f]">
-                        Eng
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about">
-                      <a className="text-[#30373E] text-[14px] leading-6 uppercase transition-all hover:text-[#263a4f]">
-                        Fre
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
+                {/*<ul className="footer-language flex md:justify-end justify-center">*/}
+                {/*  <li className="mr-8">*/}
+                {/*    <Link href="/about">*/}
+                {/*      <a className="text-[#30373E] text-[14px] leading-6 uppercase transition-all hover:text-[#263a4f]">*/}
+                {/*        Eng*/}
+                {/*      </a>*/}
+                {/*    </Link>*/}
+                {/*  </li>*/}
+                {/*  <li>*/}
+                {/*    <Link href="/about">*/}
+                {/*      <a className="text-[#30373E] text-[14px] leading-6 uppercase transition-all hover:text-[#263a4f]">*/}
+                {/*        Fre*/}
+                {/*      </a>*/}
+                {/*    </Link>*/}
+                {/*  </li>*/}
+                {/*</ul>*/}
               </div>
             </div>
           </div>

@@ -8,15 +8,18 @@ import HeaderTwo from '../components/HeaderTwo';
 import { AuthContextProvider } from '../context/AuthContext';
 import HeaderNew from '../components/HeaderNew';
 import stitchTheme from '../utils/stitchTheme';
+import Layout from '../components/layout/layout';
 
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
   return (
     <AuthContextProvider>
+
       <themeprovider>
+        <Layout>
+
         <NextUIProvider theme={stitchTheme}>
 
-          {/* <Layout> */}
           <Head>
             <meta
               name="viewport"
@@ -29,7 +32,7 @@ function MyApp({ Component, pageProps }) {
 
         <Component {...pageProps} />
 
-        {/* </Layout> */}
+         </Layout>
 
       </themeprovider>
 
